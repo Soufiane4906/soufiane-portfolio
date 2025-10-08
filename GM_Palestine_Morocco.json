@@ -1,0 +1,37 @@
+{
+  "palette_name": "GM_Palestine_Morocco",
+  "modes": {
+    "light": {
+      "background": "#F8F5F0",
+      "surface": "#FFFFFF",
+      "text_primary": "#1C1C1C",
+      "text_secondary": "#333333",
+      "primary": "#C1272D",
+      "secondary": "#006233",
+      "accent_blue": "#6050DC",
+      "accent_gold": "#D4AF37",
+      "accent_teal": "#128C7E",
+      "neutral_sand": "#E0C097",
+      "border": "#E5E5E5",
+      "shadow": "rgba(0, 0, 0, 0.1)",
+      "gradient_primary": "linear-gradient(90deg, #C1272D, #006233)",
+      "gradient_accent": "linear-gradient(90deg, #6050DC, #D4AF37)"
+    },
+    "dark": {
+      "background": "#1C1C1C",
+      "surface": "#2A2A2A",
+      "text_primary": "#FFFFFF",
+      "text_secondary": "#E0E0E0",
+      "primary": "#EF3340",
+      "secondary": "#007A3D",
+      "accent_blue": "#4C45C6",
+      "accent_gold": "#C6A13D",
+      "accent_teal": "#0F6E64",
+      "neutral_sand": "#A38360",
+      "border": "#444444",
+      "shadow": "rgba(0, 0, 0, 0.4)",
+      "gradient_primary": "linear-gradient(90deg, #EF3340, #007A3D)",
+      "gradient_accent": "linear-gradient(90deg, #4C45C6, #C6A13D)"
+    }
+  }
+}

@@ -1,0 +1,205 @@
+═══════════════════════════════════════════════════════════════════════════════
+            📸 EXTRACTION COMPLÈTE DES IMAGES DU PORTFOLIO
+═══════════════════════════════════════════════════════════════════════════════
+
+RÉSUMÉ GLOBAL
+═════════════
+Total d'images extraites: 33
+  • Éducation: 4 images
+  • Expérience: 5 images
+  • Certifications: 24 images
+
+Fichiers sources:
+  • EDUCTION.HTML
+  • EXPERIENCE.HTML
+  • LICENCEandcertif.html
+
+═══════════════════════════════════════════════════════════════════════════════
+📚 SECTION ÉDUCATION (4 images)
+═══════════════════════════════════════════════════════════════════════════════
+
+1. Université Côte d'Azur (UCA)
+   ├─ Diplôme: Master M2 MBDS
+   ├─ Période: 2024-2025
+   └─ URL: https://media.licdn.com/dms/image/v2/D4E0BAQGFGluKlFLKbg/...
+
+2. École Marocaine des Sciences de l'Ingénieur (EMSI)
+   ├─ Diplôme: Ingénieur en Informatique
+   ├─ Période: 2020-2023
+   └─ URL: https://media.licdn.com/dms/image/v2/D4E0BAQE_Fu9hueUY4g/...
+
+3. Faculté des Sciences et Techniques Mohammedia (FSTM)
+   ├─ Diplôme: Licence Mathématiques Informatique
+   ├─ Période: 2017-2020
+   └─ URL: https://media.licdn.com/dms/image/v2/C4E0BAQHsmvJCblF1VA/...
+
+4. Faculté des Sciences et Techniques Mohammedia (FSTM) [Duplicate]
+   └─ URL: https://media.licdn.com/dms/image/v2/C4E0BAQHsmvJCblF1VA/...
+
+═══════════════════════════════════════════════════════════════════════════════
+💼 SECTION EXPÉRIENCE PROFESSIONNELLE (5 images)
+═══════════════════════════════════════════════════════════════════════════════
+
+1. Capgemini
+   ├─ Poste: Ingénieur Étude et Développement
+   ├─ Période: Mars 2024 - Août 2024
+   ├─ Lieu: France
+   └─ URL: https://media.licdn.com/dms/image/v2/D4D0BAQH-ZV832H4sdA/...
+
+2. OLA Energy
+   ├─ Poste: Stagiaire DevOps Engineer
+   ├─ Période: Avril 2023 - Juin 2023
+   ├─ Lieu: Casablanca, Maroc
+   └─ URL: https://media.licdn.com/dms/image/v2/D4E0BAQHCmuWqR_iuJA/...
+
+3. SILIAD
+   ├─ Poste: Développeur Full Stack
+   ├─ Période: Juillet 2022 - Septembre 2022
+   ├─ Lieu: Casablanca, Maroc
+   └─ URL: https://media.licdn.com/dms/image/v2/D4E0BAQF2qiBAi7Z96g/...
+
+4. ONP - Office National des Pêches
+   ├─ Poste: Développeur Full Stack
+   ├─ Période: Juillet 2021 - Septembre 2021
+   ├─ Lieu: Casablanca, Maroc
+   └─ URL: https://media.licdn.com/dms/image/v2/C560BAQFcoH7OrmEgyA/...
+
+5. Alami ecom (Freelance)
+   ├─ Poste: Développeur Full Stack
+   ├─ Période: Mars 2021 - Juin 2021
+   ├─ Lieu: Casablanca, Maroc
+   └─ URL: https://media.licdn.com/dms/image/v2/D4E0BAQGRyLYTNz-RJg/...
+
+═══════════════════════════════════════════════════════════════════════════════
+🎓 SECTION CERTIFICATIONS (24 images)
+═══════════════════════════════════════════════════════════════════════════════
+
+PRINCIPALES CERTIFICATIONS:
+
+1. IBM - Data Science
+   └─ URL: https://media.licdn.com/dms/image/v2/D560BAQGiz5ecgpCtkA/...
+
+2. Google Cloud Training Online
+   └─ URL: https://media.licdn.com/dms/image/v2/C4D0BAQHTIj3QmQ5N0A/...
+
+3. Certiprof - SCRUM Foundation Professional Certificate
+   └─ URL: https://media.licdn.com/dms/image/v2/D4E0BAQH1qwoIk9cWIQ/...
+
+4. Meta - Back-End Developer
+   └─ URL: https://media.licdn.com/dms/image/v2/D560BAQHBmbxCDP0JQQ/...
+
+5. Google - IT Support
+   └─ URL: https://media.licdn.com/dms/image/v2/D4E0BAQGv3cqOuUMY7g/...
+
+6. Big Interview
+   └─ URL: https://media.licdn.com/dms/image/v2/D4D0BAQGRYxJEhCli5Q/...
+
+7. Whizlabs
+   └─ URL: https://media.licdn.com/dms/image/v2/C560BAQG3lm3m1nOaHA/...
+
+8. University of Pennsylvania
+   └─ URL: https://media.licdn.com/dms/image/v2/C4E0BAQHnbnsnJlBiZg/...
+
+9. University of Michigan
+   └─ URL: https://media.licdn.com/dms/image/v2/C4E0BAQFGfERBPGurCg/...
+
+10. Codio
+    └─ URL: https://media.licdn.com/dms/image/v2/D4E0BAQH599T9C3zrww/...
+
+11. The Hong Kong University of Science and Technology
+    └─ URL: https://media.licdn.com/dms/image/v2/D560BAQEAi2tXX6yTVg/...
+
+12. Institut français du Maroc
+    └─ URL: https://media.licdn.com/dms/image/v2/D4E0BAQE0rtBXlgypXQ/...
+
+13. Udemy (Multiples formations)
+    └─ URL: https://media.licdn.com/dms/image/v2/D560BAQEf_NHzN2yVQg/...
+    └─ Note: 4 occurrences de logos Udemy trouvées
+
+14. Coursera
+    └─ URL: https://media.licdn.com/dms/image/v2/C4D0BAQGexnfBxeEG-g/...
+
+15. Cisco - Networking
+    └─ URL: https://media.licdn.com/dms/image/v2/D560BAQGo0LANKsqgCg/...
+
+DOCUMENTS DE CERTIFICATION (3 images):
+  • Document 1: profile-treasury-document-cover-images
+  • Document 2: profile-treasury-document-cover-images
+  • Document 3: profile-treasury-document-cover-images
+
+═══════════════════════════════════════════════════════════════════════════════
+📊 ANALYSE DES DONNÉES
+═══════════════════════════════════════════════════════════════════════════════
+
+Format des images:
+  • Taille: 48x48 pixels (logos company)
+  • Type: company-logo_100_100
+  • Source: LinkedIn CDN (media.licdn.com)
+  • Format: JPG/PNG optimisé pour le web
+
+Distribution par catégorie:
+  • Éducation:      12.1% (4/33)
+  • Expérience:     15.2% (5/33)
+  • Certifications: 72.7% (24/33)
+
+Providers de certifications identifiés:
+  ✓ IBM
+  ✓ Google (Google Cloud + Google IT)
+  ✓ Meta
+  ✓ Certiprof
+  ✓ Udemy (multiples)
+  ✓ Coursera
+  ✓ Cisco
+  ✓ Big Interview
+  ✓ Whizlabs
+  ✓ Codio
+  ✓ University of Pennsylvania
+  ✓ University of Michigan
+  ✓ Hong Kong UST
+  ✓ Institut français du Maroc
+
+═══════════════════════════════════════════════════════════════════════════════
+📝 FICHIERS GÉNÉRÉS
+═══════════════════════════════════════════════════════════════════════════════
+
+1. images_extraites.csv
+   └─ Fichier CSV avec toutes les données structurées
+   └─ Peut être ouvert avec Excel, Google Sheets, etc.
+   └─ Colonnes: category, alt, src_clean, width, height, source_file, src
+
+2. TOUTES_LES_IMAGES.html
+   └─ Galerie HTML interactive avec toutes les images
+   └─ Affichage visuel organisé par catégorie
+   └─ Responsive design avec palette Palestine-Maroc
+
+3. RESUME_IMAGES.txt (ce fichier)
+   └─ Résumé textuel complet de toutes les extractions
+
+═══════════════════════════════════════════════════════════════════════════════
+✅ UTILISATION
+═══════════════════════════════════════════════════════════════════════════════
+
+Pour visualiser les images:
+  1. Ouvrir TOUTES_LES_IMAGES.html dans un navigateur web
+  2. Consulter images_extraites.csv avec Excel pour éditer
+  3. Lire ce fichier (RESUME_IMAGES.txt) pour un aperçu rapide
+
+Notes importantes:
+  • Toutes les URLs LinkedIn expirent après une certaine période
+  • Les images sont hébergées sur le CDN LinkedIn
+  • Pour une utilisation permanente, télécharger les images localement
+  • Le fichier metadata.json contient des URLs alternatives publiques
+
+═══════════════════════════════════════════════════════════════════════════════
+📧 CONTACT
+═══════════════════════════════════════════════════════════════════════════════
+
+Soufiane Aniba
+Email: anibasoufiane2001@gmail.com
+LinkedIn: https://linkedin.com/in/soufianeaniba
+Portfolio: En développement avec palette Palestine-Maroc
+
+═══════════════════════════════════════════════════════════════════════════════
+Date d'extraction: Octobre 2025
+Version: 1.0
+═══════════════════════════════════════════════════════════════════════════════

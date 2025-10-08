@@ -1,0 +1,1383 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soufiane Aniba - Portfolio Magique</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+
+    <!-- CSS externe -->
+    <link rel="stylesheet" href="portfolio-style.css">
+</head>
+
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo">
+                <div class="logo-icon">
+                    <i data-lucide="code-2"></i>
+                </div>
+                Soufiane Aniba
+            </a>
+
+            <!-- Hamburger Menu Button -->
+            <button class="hamburger" onclick="toggleMenu()" aria-label="Menu">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </button>
+
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#projets" class="nav-link" onclick="closeMenu()">
+                    <i data-lucide="rocket" class="nav-icon"></i>
+                    <span>Projets</span>
+                </a></li>
+                <li><a href="#competences" class="nav-link" onclick="closeMenu()">
+                    <i data-lucide="wrench" class="nav-icon"></i>
+                    <span>Compétences</span>
+                </a></li>
+                <li><a href="#cv-academique" class="nav-link" onclick="closeMenu()">
+                    <i data-lucide="graduation-cap" class="nav-icon"></i>
+                    <span>CV & Formation</span>
+                </a></li>
+                <li><a href="#contact" class="nav-link" onclick="closeMenu()">
+                    <i data-lucide="mail" class="nav-icon"></i>
+                    <span>Contact</span>
+                </a></li>
+                <li><button class="theme-toggle" onclick="toggleTheme()" title="Changer le thème">
+                    <i data-lucide="moon" id="theme-icon"></i>
+                </button></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">Portfolio Magique</h1>
+            <p class="hero-subtitle">Transformateur d'idées en projets innovants</p>
+            <a href="#projets" class="cta-button">
+                <i data-lucide="arrow-down"></i>
+                Découvrir mes projets
+            </a>
+
+            <!-- Slider magique -->
+            <div class="hero-slider">
+                <div class="slider-container">
+                    <div class="slider-track" id="sliderTrack">
+                        <!-- Slide 1: Automotive -->
+                        <div class="slide">
+                            <div class="slide-content">
+                                <h3 class="slide-title">🚗 Automotive.ma</h3>
+                                <p class="slide-description">
+                                    Plateforme complète de location automobile avec plus de 2000 utilisateurs actifs et 50+ agences partenaires à travers le Maroc.
+                                </p>
+                                <div class="slide-stats">
+                                    <div class="slide-stat">
+                                        <span class="slide-stat-number">2000+</span>
+                                        <span class="slide-stat-label">Utilisateurs</span>
+                                    </div>
+                                    <div class="slide-stat">
+                                        <span class="slide-stat-number">50+</span>
+                                        <span class="slide-stat-label">Agences</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="slide-image">
+                                <i data-lucide="car"></i>
+                            </div>
+                        </div>
+
+                        <!-- Slide 2: BlaBlaTrip -->
+                        <div class="slide">
+                            <div class="slide-content">
+                                <h3 class="slide-title">🌍 BlaBlaTrip</h3>
+                                <p class="slide-description">
+                                    Application de covoiturage innovante avec 1500+ voyageurs et un taux de satisfaction de 95%. PWA avec fonctionnalités offline.
+                                </p>
+                                <div class="slide-stats">
+                                    <div class="slide-stat">
+                                        <span class="slide-stat-number">1500+</span>
+                                        <span class="slide-stat-label">Voyageurs</span>
+                                    </div>
+                                    <div class="slide-stat">
+                                        <span class="slide-stat-number">95%</span>
+                                        <span class="slide-stat-label">Satisfaction</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="slide-image">
+                                <i data-lucide="map-pin"></i>
+                            </div>
+                        </div>
+
+                        <!-- Slide 3: MoroccAutoParts -->
+                        <div class="slide">
+                            <div class="slide-content">
+                                <h3 class="slide-title">🔧 MoroccAutoParts</h3>
+                                <p class="slide-description">
+                                    Marketplace B2B/B2C avec plus de 10,000 références de pièces automobiles et 200+ vendeurs actifs. Disponibilité 98%.
+                                </p>
+                                <div class="slide-stats">
+                                    <div class="slide-stat">
+                                        <span class="slide-stat-number">10k+</span>
+                                        <span class="slide-stat-label">Références</span>
+                                    </div>
+                                    <div class="slide-stat">
+                                        <span class="slide-stat-number">200+</span>
+                                        <span class="slide-stat-label">Vendeurs</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="slide-image">
+                                <i data-lucide="shopping-cart"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Indicateurs du slider -->
+                    <div class="slider-dots">
+                        <span class="slider-dot active" data-slide="0"></span>
+                        <span class="slider-dot" data-slide="1"></span>
+                        <span class="slider-dot" data-slide="2"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="container">
+        <!-- Projets Section -->
+        <section id="projets" class="section">
+            <h2 class="section-title">Mes Projets en Production</h2>
+            <div class="projects-grid">
+                <!-- Automotive.ma -->
+                <div class="project-card">
+                    <div class="project-header">
+                        <div class="project-logo">
+                            <img src="public/assets/img/projects/automotive.png" alt="Automotive.ma Logo" />
+                        </div>
+                        <div class="project-info">
+                            <h3>Automotive.ma</h3>
+                            <p>Plateforme de Location Automobile</p>
+                        </div>
+                    </div>
+                    <p class="project-description">
+                        Solution complète de location de voitures au Maroc avec système de réservation en ligne,
+                        gestion de flotte temps réel et interface d'administration avancée. Plus de 100 villes
+                        couvertes avec un réseau de 50+ agences partenaires.
+                    </p>
+                    <div class="project-stats">
+                        <div class="stat">
+                            <span class="stat-number">2000+</span>
+                            <span class="stat-label">Utilisateurs</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">50+</span>
+                            <span class="stat-label">Agences</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">100+</span>
+                            <span class="stat-label">Villes</span>
+                        </div>
+                    </div>
+                    <div class="tech-stack">
+                        <span class="tech-tag">React</span>
+                        <span class="tech-tag">Node.js</span>
+                        <span class="tech-tag">MongoDB</span>
+                        <span class="tech-tag">Express.js</span>
+                        <span class="tech-tag">Stripe API</span>
+                        <span class="tech-tag">Socket.io</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://automotive.ma" target="_blank" rel="noopener" class="project-link">
+                            <i data-lucide="external-link"></i>
+                            Visiter le site
+                        </a>
+                    </div>
+                </div>
+
+                <!-- BlaBlaTrip (BBTies) -->
+                <div class="project-card">
+                    <div class="project-header">
+                        <div class="project-logo">
+                            <img src="public/assets/img/projects/blablatrip.png" alt="BlaBlaTrip Logo" />
+                        </div>
+                        <div class="project-info">
+                            <h3>BlaBlaTrip.com</h3>
+                            <p>Plateforme de Covoiturage & Communication</p>
+                        </div>
+                    </div>
+                    <p class="project-description">
+                        Plateforme innovante combinant covoiturage et communication professionnelle sécurisée.
+                        Messagerie chiffrée end-to-end, géolocalisation en temps réel, partage de trajets et
+                        gestion d'équipes. PWA optimisée pour mobile avec fonctionnalités offline.
+                    </p>
+                    <div class="project-stats">
+                        <div class="stat">
+                            <span class="stat-number">2500+</span>
+                            <span class="stat-label">Utilisateurs</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">500+</span>
+                            <span class="stat-label">Trajets/mois</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">95%</span>
+                            <span class="stat-label">Satisfaction</span>
+                        </div>
+                    </div>
+                    <div class="tech-stack">
+                        <span class="tech-tag">Vue.js</span>
+                        <span class="tech-tag">React</span>
+                        <span class="tech-tag">Spring Boot</span>
+                        <span class="tech-tag">Laravel</span>
+                        <span class="tech-tag">WebSocket</span>
+                        <span class="tech-tag">PostgreSQL</span>
+                        <span class="tech-tag">Redis</span>
+                        <span class="tech-tag">Google Maps API</span>
+                        <span class="tech-tag">PWA</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://blablatrip.com" target="_blank" rel="noopener" class="project-link">
+                            <i data-lucide="external-link"></i>
+                            Visiter le site
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Allo Phone -->
+                <div class="project-card">
+                    <div class="project-header">
+                        <div class="project-logo">
+                            <img src="public/assets/img/projects/alophone.png" alt="Allo Phone Logo" />
+                        </div>
+                        <div class="project-info">
+                            <h3>Allo Phone</h3>
+                            <p>Réparation Mobile à Domicile</p>
+                        </div>
+                    </div>
+                    <p class="project-description">
+                        Service de réparation de smartphones à domicile au Maroc.
+                        Réservation en ligne, intervention rapide et garantie sur toutes les réparations.
+                        Techniciens certifiés disponibles 7j/7.
+                    </p>
+                    <div class="project-stats">
+                        <div class="stat">
+                            <span class="stat-number">500+</span>
+                            <span class="stat-label">Réparations</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">98%</span>
+                            <span class="stat-label">Satisfaction</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">24h</span>
+                            <span class="stat-label">Intervention</span>
+                        </div>
+                    </div>
+                    <div class="tech-stack">
+                        <span class="tech-tag">React Native</span>
+                        <span class="tech-tag">Node.js</span>
+                        <span class="tech-tag">MongoDB</span>
+                        <span class="tech-tag">Google Maps</span>
+                        <span class="tech-tag">Stripe</span>
+                        <span class="tech-tag">PWA</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://allo-phones-maroc.base44.app" target="_blank" rel="noopener" class="project-link">
+                            <i data-lucide="external-link"></i>
+                            Visiter le site
+                        </a>
+                    </div>
+                </div>
+
+                <!-- MoroccAutoParts -->
+                <div class="project-card">
+                    <div class="project-header">
+                        <div class="project-logo">
+                            <img src="public/assets/img/projects/moroccautoparts.png" alt="Morocco AutoPièces Logo" />
+                        </div>
+                        <div class="project-info">
+                            <h3>MoroccAutoParts.com</h3>
+                            <p>Marketplace Pièces Auto</p>
+                        </div>
+                    </div>
+                    <p class="project-description">
+                        Marketplace B2B/B2C spécialisée en pièces automobiles avec catalogue intelligent,
+                        système multi-vendeurs et gestion logistique intégrée. Plus de 10,000 références
+                        avec recherche avancée par VIN.
+                    </p>
+                    <div class="project-stats">
+                        <div class="stat">
+                            <span class="stat-number">10k+</span>
+                            <span class="stat-label">Références</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">200+</span>
+                            <span class="stat-label">Vendeurs</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">98%</span>
+                            <span class="stat-label">Disponibilité</span>
+                        </div>
+                    </div>
+                    <div class="tech-stack">
+                        <span class="tech-tag">Angular</span>
+                        <span class="tech-tag">Spring Boot</span>
+                        <span class="tech-tag">PostgreSQL</span>
+                        <span class="tech-tag">Redis</span>
+                        <span class="tech-tag">Elasticsearch</span>
+                        <span class="tech-tag">PayPal API</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://moroccautoparts.com" target="_blank" rel="noopener" class="project-link">
+                            <i data-lucide="external-link"></i>
+                            Visiter le site
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Compétences Section -->
+        <section id="competences" class="section">
+            <h2 class="section-title">Stack Technologique</h2>
+            <div class="skills-container">
+                <div class="skill-category">
+                    <h3><i data-lucide="monitor"></i> Frontend</h3>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React" class="skill-icon"/>
+                            React
+                        </div>
+                        <div class="skill-item">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vuejs/vuejs-original.svg" alt="Vue.js" class="skill-icon"/>
+                            Vue.js
+                        </div>
+                        <div class="skill-item">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/angularjs/angularjs-original.svg" alt="Angular" class="skill-icon"/>
+                            Angular
+                        </div>
+                        <div class="skill-item">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript" class="skill-icon"/>
+                            JavaScript
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3><i data-lucide="server"></i> Backend</h3>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original.svg" alt="Spring Boot" class="skill-icon"/>
+                            Spring Boot
+                        </div>
+                        <div class="skill-item">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="Node.js" class="skill-icon"/>
+                            Node.js
+                        </div>
+                        <div class="skill-item">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dot-net/dot-net-original.svg" alt=".NET" class="skill-icon"/>
+                            .NET Core
+                        </div>
+                        <div class="skill-item">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/laravel/laravel-plain.svg" alt="Laravel" class="skill-icon"/>
+                            Laravel
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3><i data-lucide="database"></i> Bases de Données</h3>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" alt="MongoDB" class="skill-icon"/>
+                            MongoDB
+                        </div>
+                        <div class="skill-item">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" alt="PostgreSQL" class="skill-icon"/>
+                            PostgreSQL
+                        </div>
+                        <div class="skill-item">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="MySQL" class="skill-icon"/>
+                            MySQL
+                        </div>
+                        <div class="skill-item">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redis/redis-original.svg" alt="Redis" class="skill-icon"/>
+                            Redis
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3><i data-lucide="cloud"></i> DevOps & Cloud</h3>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" alt="Docker" class="skill-icon"/>
+                            Docker
+                        </div>
+                        <div class="skill-item">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jenkins/jenkins-original.svg" alt="Jenkins" class="skill-icon"/>
+                            Jenkins
+                        </div>
+                        <div class="skill-item">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original.svg" alt="AWS" class="skill-icon"/>
+                            AWS
+                        </div>
+                        <div class="skill-item">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/azure/azure-original.svg" alt="Azure" class="skill-icon"/>
+                            Azure
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CV & Parcours Académique Section -->
+        <section id="cv-academique" class="section cv-section">
+            <h2 class="section-title">CV & Parcours Académique</h2>
+
+            <!-- CV Preview Slider -->
+            <div class="cv-preview-container">
+                <div class="cv-preview-header">
+                    <h3><i data-lucide="file-text"></i> Mon CV en PDF</h3>
+                    <div class="cv-actions">
+                        <a href="Soufiane_Aniba_CV_2025.pdf" target="_blank" class="cv-action-btn">
+                            <i data-lucide="external-link"></i>
+                            Ouvrir PDF
+                        </a>
+                        <a href="Soufiane_Aniba_CV_2025.pdf" download class="cv-action-btn">
+                            <i data-lucide="download"></i>
+                            Télécharger
+                        </a>
+                    </div>
+                </div>
+
+                <div class="cv-preview">
+                    <div class="cv-iframe-container">
+                        <iframe src="Soufiane_Aniba_CV_2025.pdf" class="cv-iframe" title="CV Soufiane Aniba"></iframe>
+                        <div class="cv-overlay">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Parcours Académique -->
+            <div class="academic-timeline">
+                <h3><i data-lucide="graduation-cap"></i> Parcours Académique</h3>
+
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-marker">
+                            <div class="school-logo">
+                                <img src="public/assets/img/education/Université_Côte_d'Azur.png" alt="UCA Logo" class="logo-img">
+                            </div>
+                        </div>
+                        <div class="timeline-content">
+                            <div class="timeline-date">2024 - 2025</div>
+                            <h4>Master M2 - Big Data & Systems Integration</h4>
+                            <p class="institution">École Nationale des Sciences Numériques, Université Côte d'Azur</p>
+                            <ul class="timeline-details">
+                                <li>Spécialisation : Big Data, Intelligence Artificielle et Intégration Système</li>
+                                <li>Technologies : Spark, Hadoop, Python, Machine Learning, Docker</li>
+                                <li>Projets : Analyse de données massives, Architecture distribuée</li>
+                                <li>En cours - Formation d'excellence en Data Science</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-marker">
+                            <div class="school-logo">
+                                <img src="public/assets/img/education/Ecole_Marocaine_des_Sciences_de_l'ingénieur.png" alt="EMSI Logo" class="logo-img">
+                            </div>
+                        </div>
+                        <div class="timeline-content">
+                            <div class="timeline-date">2023 - 2025</div>
+                            <h4>Ingénieur Informatique</h4>
+                            <p class="institution">EMSI Casablanca</p>
+                            <ul class="timeline-details">
+                                <li>Cycle Ingénieur en Génie Informatique</li>
+                                <li>Spécialisation : Développement Full-Stack et Architecture Logicielle</li>
+                                <li>Technologies : Spring Boot, Angular, React, DevOps, Cloud Computing</li>
+                                <li>Projet de fin d'études : Plateformes e-commerce et applications mobiles</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-marker">
+                            <div class="school-logo">
+                                <img src="public/assets/img/education/Faculté_des_Sciences_et_Techniques_Mohammedia_(FST.png" alt="FST Logo" class="logo-img">
+                            </div>
+                        </div>
+                        <div class="timeline-content">
+                            <div class="timeline-date">2020 - 2023</div>
+                            <h4>Licence Informatique & Réseaux</h4>
+                            <p class="institution">FST Mohammedia, Université Hassan II</p>
+                            <ul class="timeline-details">
+                                <li>Parcours : Informatique et Réseaux de Télécommunications</li>
+                                <li>Formation solide en programmation et administration réseau</li>
+                                <li>Technologies : Java, C++, Python, Réseaux, Systèmes Linux</li>
+                                <li>Projets : Applications de gestion et administration système</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Certifications Slider -->
+            <div class="certifications-section">
+                <h3><i data-lucide="award"></i> Certifications & Formations</h3>
+
+                <!-- Slider Container -->
+                <div class="certifications-slider">
+                    <div class="certifications-container">
+                        <div class="certifications-track" id="certificationsTrack">
+
+                            <!-- Certification 1: IBM Big Data Spark Hadoop -->
+                            <div class="certification-slide">
+                                <div class="certification-card">
+                                    <div class="cert-logo">
+                                        <img src="public/assets/img/certification/IBM.png" alt="IBM Logo" class="cert-logo-img">
+                                    </div>
+                                    <div class="cert-content">
+                                        <h4>Introduction to Big Data with Spark and Hadoop</h4>
+                                        <p class="cert-provider">IBM</p>
+                                        <p class="cert-description">ID: ZIRTQKO204AD</p>
+                                        <span class="cert-date">Janvier 2025</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Certification 2: Google Cloud Java Microservices -->
+                            <div class="certification-slide">
+                                <div class="certification-card">
+                                    <div class="cert-logo">
+                                        <img src="public/assets/img/certification/Google_Cloud_Training_Online.png" alt="Google Cloud Logo" class="cert-logo-img">
+                                    </div>
+                                    <div class="cert-content">
+                                        <h4>Building Scalable Java Microservices with Spring Boot and Spring Cloud</h4>
+                                        <p class="cert-provider">Google Cloud Training Online</p>
+                                        <p class="cert-description">ID: TN0W6IX4M8Q4</p>
+                                        <span class="cert-date">Novembre 2024</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Certification 3: SCRUM Foundation -->
+                            <div class="certification-slide">
+                                <div class="certification-card">
+                                    <div class="cert-logo">
+                                        <img src="public/assets/img/certification/Certiprof.png" alt="Certiprof Logo" class="cert-logo-img">
+                                    </div>
+                                    <div class="cert-content">
+                                        <h4>SCRUM FOUNDATION PROFESSIONAL CERTIFICATION SFPC</h4>
+                                        <p class="cert-provider">Certiprof</p>
+                                        <p class="cert-description">ID: 100126263</p>
+                                        <span class="cert-date">Septembre 2024</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Certification 4: IBM Docker Kubernetes -->
+                            <div class="certification-slide">
+                                <div class="certification-card">
+                                    <div class="cert-logo">
+                                        <img src="public/assets/img/certification/IBM.png" alt="IBM Logo" class="cert-logo-img">
+                                    </div>
+                                    <div class="cert-content">
+                                        <h4>Introduction to Containers w/ Docker, Kubernetes & OpenShift</h4>
+                                        <p class="cert-provider">IBM</p>
+                                        <p class="cert-description">ID: WJTD53TDAT4N</p>
+                                        <span class="cert-date">Mai 2024</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Certification 5: Meta React Native -->
+                            <div class="certification-slide">
+                                <div class="certification-card">
+                                    <div class="cert-logo">
+                                        <img src="public/assets/img/certification/Meta.png" alt="Meta Logo" class="cert-logo-img">
+                                    </div>
+                                    <div class="cert-content">
+                                        <h4>React Native</h4>
+                                        <p class="cert-provider">Meta</p>
+                                        <p class="cert-description">ID: M6DFPVWZX2QA</p>
+                                        <span class="cert-date">Mai 2024</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Certification 6: Big Interview -->
+                            <div class="certification-slide">
+                                <div class="certification-card">
+                                    <div class="cert-logo">
+                                        <img src="public/assets/img/certification/Big_Interview.png" alt="Big Interview Logo" class="cert-logo-img">
+                                    </div>
+                                    <div class="cert-content">
+                                        <h4>The Art of the Job Interview</h4>
+                                        <p class="cert-provider">Big Interview</p>
+                                        <p class="cert-description">ID: 7PQP77WWLQH5</p>
+                                        <span class="cert-date">Mai 2024</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Certification 7: Whizlabs Azure -->
+                            <div class="certification-slide">
+                                <div class="certification-card">
+                                    <div class="cert-logo">
+                                        <img src="public/assets/img/certification/Whizlabs.png" alt="Whizlabs Logo" class="cert-logo-img">
+                                    </div>
+                                    <div class="cert-content">
+                                        <h4>Virtual Networks in Azure</h4>
+                                        <p class="cert-provider">Whizlabs</p>
+                                        <p class="cert-description">ID: 5X68QVTNEVAG</p>
+                                        <span class="cert-date">Mai 2024</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Certification 8: Google Git GitHub -->
+                            <div class="certification-slide">
+                                <div class="certification-card">
+                                    <div class="cert-logo">
+                                        <img src="public/assets/img/certification/Google.png" alt="Google Logo" class="cert-logo-img">
+                                    </div>
+                                    <div class="cert-content">
+                                        <h4>Introduction to Git and GitHub</h4>
+                                        <p class="cert-provider">Google</p>
+                                        <p class="cert-description">ID: ACAG2A4339YJ</p>
+                                        <span class="cert-date">Avril 2024</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Certification 9: Meta React Basics -->
+                            <div class="certification-slide">
+                                <div class="certification-card">
+                                    <div class="cert-logo">
+                                        <img src="public/assets/img/certification/Meta.png" alt="Meta Logo" class="cert-logo-img">
+                                    </div>
+                                    <div class="cert-content">
+                                        <h4>React Basics</h4>
+                                        <p class="cert-provider">Meta</p>
+                                        <p class="cert-description">Formation complète React.js</p>
+                                        <span class="cert-date">Janvier 2024</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Certification 10: University of Pennsylvania Java -->
+                            <div class="certification-slide">
+                                <div class="certification-card">
+                                    <div class="cert-logo">
+                                        <img src="public/assets/img/certification/University_of_Pennsylvania.png" alt="UPenn Logo" class="cert-logo-img">
+                                    </div>
+                                    <div class="cert-content">
+                                        <h4>Introduction to Java and Object-Oriented Programming</h4>
+                                        <p class="cert-provider">University of Pennsylvania</p>
+                                        <p class="cert-description">ID: 7R9UPBGDTWJU</p>
+                                        <span class="cert-date">Novembre 2023</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Certification 11: University of Michigan Python -->
+                            <div class="certification-slide">
+                                <div class="certification-card">
+                                    <div class="cert-logo">
+                                        <img src="public/assets/img/certification/University_of_Michigan.png" alt="UMich Logo" class="cert-logo-img">
+                                    </div>
+                                    <div class="cert-content">
+                                        <h4>Python for Everybody</h4>
+                                        <p class="cert-provider">University of Michigan</p>
+                                        <p class="cert-description">ID: 327K6VKWWCCW - Python Data Structures, Web Data, Database</p>
+                                        <span class="cert-date">Avril 2023</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Certification 12: Codio Unix -->
+                            <div class="certification-slide">
+                                <div class="certification-card">
+                                    <div class="cert-logo">
+                                        <img src="public/assets/img/certification/Codio.png" alt="Codio Logo" class="cert-logo-img">
+                                    </div>
+                                    <div class="cert-content">
+                                        <h4>Unix System Basics</h4>
+                                        <p class="cert-provider">Codio</p>
+                                        <p class="cert-description">ID: QNXKNYAHEQHM</p>
+                                        <span class="cert-date">Avril 2023</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Certification 13: HKUST UML -->
+                            <div class="certification-slide">
+                                <div class="certification-card">
+                                    <div class="cert-logo">
+                                        <img src="public/assets/img/certification/The_Hong_Kong_University_of_Science_and_Technology.png" alt="HKUST Logo" class="cert-logo-img">
+                                    </div>
+                                    <div class="cert-content">
+                                        <h4>Software Engineering: Modeling Software Systems using UML</h4>
+                                        <p class="cert-provider">The Hong Kong University of Science and Technology</p>
+                                        <p class="cert-description">ID: SXHCG5ETC3K6</p>
+                                        <span class="cert-date">Mars 2023</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Certification 14: Udemy Apache Kafka -->
+                            <div class="certification-slide">
+                                <div class="certification-card">
+                                    <div class="cert-logo">
+                                        <img src="public/assets/img/certification/Udemy.png" alt="Udemy Logo" class="cert-logo-img">
+                                    </div>
+                                    <div class="cert-content">
+                                        <h4>Apache Kafka for Developers using Spring Boot</h4>
+                                        <p class="cert-provider">Udemy</p>
+                                        <p class="cert-description">ID: UC-545eb692-909b-49f9-834f-853d678d8f9e</p>
+                                        <span class="cert-date">2023</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Certification 15: Udemy REST API -->
+                            <div class="certification-slide">
+                                <div class="certification-card">
+                                    <div class="cert-logo">
+                                        <img src="public/assets/img/certification/Udemy.png" alt="Udemy Logo" class="cert-logo-img">
+                                    </div>
+                                    <div class="cert-content">
+                                        <h4>Build REST API with Spring Boot & Spring Data JPA</h4>
+                                        <p class="cert-provider">Udemy</p>
+                                        <p class="cert-description">Développement d'API REST avec Spring Boot</p>
+                                        <span class="cert-date">2023</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Certification 16: Coursera Distributed Systems -->
+                            <div class="certification-slide">
+                                <div class="certification-card">
+                                    <div class="cert-logo">
+                                        <img src="public/assets/img/certification/Coursera.png" alt="Coursera Logo" class="cert-logo-img">
+                                    </div>
+                                    <div class="cert-content">
+                                        <h4>Building Modern Distributed Systems with Java</h4>
+                                        <p class="cert-provider">Coursera</p>
+                                        <p class="cert-description">ID: LJJVT9JD69U4</p>
+                                        <span class="cert-date">2023</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Certification 17: Cisco CCNA Security -->
+                            <div class="certification-slide">
+                                <div class="certification-card">
+                                    <div class="cert-logo">
+                                        <img src="public/assets/img/certification/Cisco.png" alt="Cisco Logo" class="cert-logo-img">
+                                    </div>
+                                    <div class="cert-content">
+                                        <h4>CCNA Security</h4>
+                                        <p class="cert-provider">Cisco</p>
+                                        <p class="cert-description">Certification sécurité réseau</p>
+                                        <span class="cert-date">2023</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Certification 18: Udemy JUnit Mockito -->
+                            <div class="certification-slide">
+                                <div class="certification-card">
+                                    <div class="cert-logo">
+                                        <img src="public/assets/img/certification/Udemy.png" alt="Udemy Logo" class="cert-logo-img">
+                                    </div>
+                                    <div class="cert-content">
+                                        <h4>Learn Java Unit Testing with Junit & Mockito in 30 Steps</h4>
+                                        <p class="cert-provider">Udemy</p>
+                                        <p class="cert-description">ID: UC-134005ae-9863-4021-bd78-66a68b1b8895</p>
+                                        <span class="cert-date">2022</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Certification 19: Udemy Mockito Advanced -->
+                            <div class="certification-slide">
+                                <div class="certification-card">
+                                    <div class="cert-logo">
+                                        <img src="public/assets/img/certification/Udemy.png" alt="Udemy Logo" class="cert-logo-img">
+                                    </div>
+                                    <div class="cert-content">
+                                        <h4>Mockito: Next-Level Java Unit Testing</h4>
+                                        <p class="cert-provider">Udemy</p>
+                                        <p class="cert-description">ID: UC-072e5b52-d2ca-4-428b-a13e-9a2b65f5c5cc36</p>
+                                        <span class="cert-date">2022</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Certification 20: Udemy JUnit 5 -->
+                            <div class="certification-slide">
+                                <div class="certification-card">
+                                    <div class="cert-logo">
+                                        <img src="public/assets/img/certification/Udemy.png" alt="Udemy Logo" class="cert-logo-img">
+                                    </div>
+                                    <div class="cert-content">
+                                        <h4>Practical Java Unit Testing with JUnit 5</h4>
+                                        <p class="cert-provider">Udemy</p>
+                                        <p class="cert-description">Testing avancé avec JUnit 5</p>
+                                        <span class="cert-date">2022</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <!-- Navigation du slider -->
+                        <div class="certifications-nav">
+                            <button class="cert-nav-btn cert-prev" id="certPrev" title="Certification précédente" aria-label="Certification précédente">
+                                <i data-lucide="chevron-left"></i>
+                            </button>
+                            <button class="cert-nav-btn cert-next" id="certNext" title="Certification suivante" aria-label="Certification suivante">
+                                <i data-lucide="chevron-right"></i>
+                            </button>
+                        </div>
+
+                        <!-- Indicateurs -->
+                        <div class="certifications-dots">
+                            <span class="cert-dot active" data-cert="0"></span>
+                            <span class="cert-dot" data-cert="1"></span>
+                            <span class="cert-dot" data-cert="2"></span>
+                            <span class="cert-dot" data-cert="3"></span>
+                            <span class="cert-dot" data-cert="4"></span>
+                            <span class="cert-dot" data-cert="5"></span>
+                            <span class="cert-dot" data-cert="6"></span>
+                            <span class="cert-dot" data-cert="7"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="section contact-section">
+            <h2 class="section-title contact-title">Transformons vos idées ensemble</h2>
+            <p class="contact-subtitle">Prêt à donner vie à votre prochain projet ? Contactez-moi !</p>
+
+            <div class="contact-cards">
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <i data-lucide="mail"></i>
+                    </div>
+                    <h3>Email</h3>
+                    <p>anibasoufiane2001@gmail.com</p>
+                </div>
+
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <i data-lucide="phone"></i>
+                    </div>
+                    <h3>Téléphone</h3>
+                    <p>+212 656 037 963</p>
+                </div>
+
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <i data-lucide="linkedin"></i>
+                    </div>
+                    <h3>LinkedIn</h3>
+                    <p>soufianeaniba</p>
+                </div>
+
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <i data-lucide="github"></i>
+                    </div>
+                    <h3>GitHub</h3>
+                    <p>Soufiane4906</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script>
+        // Theme Management
+        function initTheme() {
+            const savedTheme = localStorage.getItem('theme') || 'light';
+            document.documentElement.setAttribute('data-theme', savedTheme);
+            updateThemeIcon(savedTheme);
+        }
+
+        function toggleTheme() {
+            const currentTheme = document.documentElement.getAttribute('data-theme');
+            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+
+            document.documentElement.setAttribute('data-theme', newTheme);
+            localStorage.setItem('theme', newTheme);
+            updateThemeIcon(newTheme);
+        }
+
+        function updateThemeIcon(theme) {
+            const themeIcon = document.getElementById('theme-icon');
+            if (themeIcon) {
+                themeIcon.setAttribute('data-lucide', theme === 'dark' ? 'sun' : 'moon');
+                // Re-initialiser les icônes Lucide
+                lucide.createIcons();
+            }
+        }
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Enhanced navbar scroll effect
+        window.addEventListener('scroll', function() {
+            const navbar = document.querySelector('.navbar');
+            const scrolled = window.scrollY > 100;
+            const currentTheme = document.documentElement.getAttribute('data-theme');
+
+            if (scrolled) {
+                navbar.style.background = currentTheme === 'dark'
+                    ? 'rgba(26, 26, 26, 0.98)'
+                    : 'rgba(255,255,255,0.98)';
+            } else {
+                navbar.style.background = currentTheme === 'dark'
+                    ? 'rgba(26, 26, 26, 0.95)'
+                    : 'rgba(255,255,255,0.95)';
+            }
+        });
+
+        // Enhanced Intersection Observer for staggered animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach((entry, index) => {
+                if (entry.isIntersecting) {
+                    setTimeout(() => {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.animation = `fadeInUp 0.8s ease forwards`;
+                    }, index * 150);
+                }
+            });
+        }, observerOptions);
+
+        // Enhanced project card interactions
+        function enhanceProjectCards() {
+            const cards = document.querySelectorAll('.project-card');
+            cards.forEach(card => {
+                card.addEventListener('mouseenter', function() {
+                    this.style.transform = 'translateY(-15px) scale(1.02)';
+                });
+
+                card.addEventListener('mouseleave', function() {
+                    this.style.transform = 'translateY(0) scale(1)';
+                });
+            });
+        }
+
+        // Print functionality
+        function printPortfolio() {
+            const originalTheme = document.documentElement.getAttribute('data-theme');
+            document.documentElement.setAttribute('data-theme', 'light');
+
+            setTimeout(() => {
+                window.print();
+                setTimeout(() => {
+                    document.documentElement.setAttribute('data-theme', originalTheme);
+                }, 100);
+            }, 100);
+        }
+
+        // Add enhanced print button
+        function createPrintButton() {
+            const printBtn = document.createElement('button');
+            printBtn.innerHTML = '<i data-lucide="printer"></i> Imprimer';
+            printBtn.style.cssText = `
+                position: fixed;
+                bottom: 20px;
+                right: 20px;
+                background: linear-gradient(45deg, var(--accent-primary), var(--accent-secondary));
+                color: white;
+                border: none;
+                padding: 15px 25px;
+                border-radius: 30px;
+                cursor: pointer;
+                z-index: 1000;
+                font-weight: 600;
+                box-shadow: 0 8px 25px var(--shadow);
+                transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+                font-size: 14px;
+                display: flex;
+                align-items: center;
+                gap: 8px;
+            `;
+
+            printBtn.addEventListener('click', printPortfolio);
+            printBtn.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateY(-5px) scale(1.05)';
+            });
+            printBtn.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateY(0) scale(1)';
+            });
+
+            document.body.appendChild(printBtn);
+
+            // Initialiser l'icône Lucide pour le bouton
+            lucide.createIcons();
+        }
+
+        // Initialize everything when DOM is loaded
+        document.addEventListener('DOMContentLoaded', function() {
+            initTheme();
+            enhanceProjectCards();
+            createPrintButton();
+            initHeroSlider();
+            initCVInteractions();
+            initCertificationsSlider(); // Ajout du slider de certifications
+
+            // Initialiser les icônes Lucide
+            lucide.createIcons();
+
+            // Observe all animated elements
+            document.querySelectorAll('.project-card, .skill-category, .timeline-item, .certification-card').forEach((element, index) => {
+                element.style.opacity = '0';
+                element.style.transform = 'translateY(30px)';
+                observer.observe(element);
+            });
+
+            // Add loading animation
+            document.body.style.opacity = '0';
+            setTimeout(() => {
+                document.body.style.transition = 'opacity 0.5s ease';
+                document.body.style.opacity = '1';
+            }, 100);
+        });
+
+        // Hero Slider Enhanced
+        function initHeroSlider() {
+            const sliderTrack = document.getElementById('sliderTrack');
+            const slides = document.querySelectorAll('.slide');
+            const dots = document.querySelectorAll('.slider-dot');
+            let currentSlide = 0;
+            let autoSlideInterval;
+
+            function updateSlider() {
+                const translateX = -currentSlide * 100;
+                sliderTrack.style.transform = `translateX(${translateX}%)`;
+
+                // Update dots
+                dots.forEach((dot, index) => {
+                    dot.classList.toggle('active', index === currentSlide);
+                });
+            }
+
+            function nextSlide() {
+                currentSlide = (currentSlide + 1) % slides.length;
+                updateSlider();
+            }
+
+            function goToSlide(index) {
+                currentSlide = index;
+                updateSlider();
+            }
+
+            function startAutoSlide() {
+                autoSlideInterval = setInterval(nextSlide, 5000);
+            }
+
+            function stopAutoSlide() {
+                clearInterval(autoSlideInterval);
+            }
+
+            // Add click handlers to dots
+            dots.forEach((dot, index) => {
+                dot.addEventListener('click', () => {
+                    goToSlide(index);
+                    stopAutoSlide();
+                    setTimeout(startAutoSlide, 10000); // Restart auto after 10s
+                });
+            });
+
+            // Pause on hover
+            const heroSlider = document.querySelector('.hero-slider');
+            heroSlider.addEventListener('mouseenter', stopAutoSlide);
+            heroSlider.addEventListener('mouseleave', startAutoSlide);
+
+            // Touch/swipe support
+            let startX = null;
+            let startY = null;
+
+            heroSlider.addEventListener('touchstart', e => {
+                startX = e.touches[0].clientX;
+                startY = e.touches[0].clientY;
+            });
+
+            heroSlider.addEventListener('touchend', e => {
+                if (!startX || !startY) return;
+
+                const endX = e.changedTouches[0].clientX;
+                const endY = e.changedTouches[0].clientY;
+                const diffX = startX - endX;
+                const diffY = startY - endY;
+
+                if (Math.abs(diffX) > Math.abs(diffY) && Math.abs(diffX) > 50) {
+                    if (diffX > 0) {
+                        // Swipe left - next slide
+                        nextSlide();
+                    } else {
+                        // Swipe right - previous slide
+                        currentSlide = currentSlide === 0 ? slides.length - 1 : currentSlide - 1;
+                        updateSlider();
+                    }
+                    stopAutoSlide();
+                    setTimeout(startAutoSlide, 10000);
+                }
+
+                startX = null;
+                startY = null;
+            });
+
+            // Start auto-slide
+            startAutoSlide();
+        }
+
+        // CV Interactions
+        function initCVInteractions() {
+            const cvOverlay = document.querySelector('.cv-overlay');
+            const cvPreview = document.querySelector('.cv-preview');
+
+            if (cvOverlay && cvPreview) {
+                cvOverlay.addEventListener('click', () => {
+                    window.open('Soufiane_Aniba_CV_2025.pdf', '_blank');
+                });
+            }
+
+            // Animate timeline items on scroll
+            const timelineItems = document.querySelectorAll('.timeline-item');
+            const timelineObserver = new IntersectionObserver((entries) => {
+                entries.forEach((entry, index) => {
+                    if (entry.isIntersecting) {
+                        setTimeout(() => {
+                            entry.target.style.opacity = '1';
+                            entry.target.style.transform = 'translateY(0)';
+                        }, index * 200);
+                    }
+                });
+            }, {
+                threshold: 0.3,
+                rootMargin: '0px 0px -50px 0px'
+            });
+
+            timelineItems.forEach(item => {
+                item.style.opacity = '0';
+                item.style.transform = 'translateY(30px)';
+                item.style.transition = 'all 0.6s cubic-bezier(0.4, 0, 0.2, 1)';
+                timelineObserver.observe(item);
+            });
+
+            // Certification cards hover effects
+            const certCards = document.querySelectorAll('.certification-card');
+            certCards.forEach(card => {
+                card.addEventListener('mouseenter', function() {
+                    this.style.transform = 'translateY(-10px) scale(1.02)';
+                });
+
+                card.addEventListener('mouseleave', function() {
+                    this.style.transform = 'translateY(0) scale(1)';
+                });
+            });
+        }
+
+        // Certifications Slider
+        function initCertificationsSlider() {
+            const track = document.getElementById('certificationsTrack');
+            const prevBtn = document.getElementById('certPrev');
+            const nextBtn = document.getElementById('certNext');
+            const dots = document.querySelectorAll('.cert-dot');
+
+            let currentSlide = 0;
+            const totalSlides = 5;
+            let autoSlideInterval;
+
+            function updateSlider() {
+                const translateX = -currentSlide * 20; // 20% par slide
+                track.style.transform = `translateX(${translateX}%)`;
+
+                // Update dots
+                dots.forEach((dot, index) => {
+                    dot.classList.toggle('active', index === currentSlide);
+                });
+            }
+
+            function nextSlide() {
+                currentSlide = (currentSlide + 1) % totalSlides;
+                updateSlider();
+            }
+
+            function prevSlide() {
+                currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+                updateSlider();
+            }
+
+            function goToSlide(index) {
+                currentSlide = index;
+                updateSlider();
+            }
+
+            function startAutoSlide() {
+                autoSlideInterval = setInterval(nextSlide, 4000);
+            }
+
+            function stopAutoSlide() {
+                clearInterval(autoSlideInterval);
+            }
+
+            // Event listeners
+            nextBtn.addEventListener('click', () => {
+                nextSlide();
+                stopAutoSlide();
+                setTimeout(startAutoSlide, 8000);
+            });
+
+            prevBtn.addEventListener('click', () => {
+                prevSlide();
+                stopAutoSlide();
+                setTimeout(startAutoSlide, 8000);
+            });
+
+            // Dots navigation
+            dots.forEach((dot, index) => {
+                dot.addEventListener('click', () => {
+                    goToSlide(index);
+                    stopAutoSlide();
+                    setTimeout(startAutoSlide, 8000);
+                });
+            });
+
+            // Touch/swipe support
+            let startX = null;
+            const sliderContainer = document.querySelector('.certifications-container');
+
+            sliderContainer.addEventListener('touchstart', e => {
+                startX = e.touches[0].clientX;
+                stopAutoSlide();
+            });
+
+            sliderContainer.addEventListener('touchend', e => {
+                if (!startX) return;
+
+                const endX = e.changedTouches[0].clientX;
+                const diffX = startX - endX;
+
+                if (Math.abs(diffX) > 50) {
+                    if (diffX > 0) {
+                        nextSlide();
+                    } else {
+                        prevSlide();
+                    }
+                }
+
+                startX = null;
+                setTimeout(startAutoSlide, 8000);
+            });
+
+            // Pause on hover
+            sliderContainer.addEventListener('mouseenter', stopAutoSlide);
+            sliderContainer.addEventListener('mouseleave', startAutoSlide);
+
+            // Keyboard navigation
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'ArrowLeft') {
+                    prevSlide();
+                    stopAutoSlide();
+                    setTimeout(startAutoSlide, 8000);
+                } else if (e.key === 'ArrowRight') {
+                    nextSlide();
+                    stopAutoSlide();
+                    setTimeout(startAutoSlide, 8000);
+                }
+            });
+
+            // Start auto-slide
+            startAutoSlide();
+        }
+
+        // Keyboard shortcuts
+        document.addEventListener('keydown', function(e) {
+            // Ctrl/Cmd + D to toggle dark mode
+            if ((e.ctrlKey || e.metaKey) && e.key === 'd') {
+                e.preventDefault();
+                toggleTheme();
+            }
+
+            // Ctrl/Cmd + P to print
+            if ((e.ctrlKey || e.metaKey) && e.key === 'p') {
+                e.preventDefault();
+                printPortfolio();
+            }
+        });
+
+        // Mobile menu functions
+        function toggleMenu() {
+            const navLinks = document.getElementById('navLinks');
+            const hamburger = document.querySelector('.hamburger');
+
+            navLinks.classList.toggle('active');
+            hamburger.classList.toggle('active');
+
+            // Prevent body scroll when menu is open
+            document.body.style.overflow = navLinks.classList.contains('active') ? 'hidden' : '';
+        }
+
+        function closeMenu() {
+            const navLinks = document.getElementById('navLinks');
+            const hamburger = document.querySelector('.hamburger');
+
+            navLinks.classList.remove('active');
+            hamburger.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+
+        // Close menu on window resize
+        window.addEventListener('resize', function() {
+            if (window.innerWidth > 768) {
+                closeMenu();
+            }
+        });
+
+        // Close menu on escape key
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                closeMenu();
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,1188 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soufiane Aniba - CV Professionnel</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.2;
+            color: #2c3e50;
+            background: #fff;
+            font-size: 9px;
+        }
+
+        .container {
+            width: 210mm;
+            min-height: 297mm;
+            margin: 0 auto;
+            background: white;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            position: relative;
+        }
+
+        /* Header */
+        .header {
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            color: white;
+            padding: 15px 20px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .header::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+            animation: float 6s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-10px) rotate(2deg); }
+        }
+
+        .header-content {
+            position: relative;
+            z-index: 2;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .profile-photo {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            border: 4px solid rgba(255,255,255,0.8);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .profile-photo:hover {
+            transform: scale(1.05);
+        }
+
+        .header-text {
+            flex: 1;
+        }
+
+        .header h1 {
+            font-size: 26px;
+            font-weight: 700;
+            margin-bottom: 4px;
+            letter-spacing: 1px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .header .subtitle {
+            font-size: 13px;
+            opacity: 0.95;
+            margin-bottom: 12px;
+            font-weight: 300;
+        }
+
+        .contact-info {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+            margin-top: 8px;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 10px;
+            background: rgba(255,255,255,0.1);
+            padding: 6px 8px;
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+        }
+
+        .contact-item i {
+            font-size: 14px;
+            width: 16px;
+            text-align: center;
+        }
+
+        .contact-icon {
+            width: 16px;
+            height: 16px;
+            object-fit: contain;
+            filter: brightness(0) invert(1);
+        }
+
+        .contact-item a {
+            color: white;
+            text-decoration: none;
+            transition: opacity 0.3s;
+        }
+
+        .contact-item a:hover {
+            opacity: 0.8;
+        }
+
+        /* Main Content */
+        .main-content {
+            display: flex;
+            min-height: calc(297mm - 160px);
+        }
+
+        .left-column {
+            width: 40%;
+            background: linear-gradient(180deg, #f8f9fa 0%, #e9ecef 100%);
+            padding: 15px;
+        }
+
+        .right-column {
+            width: 60%;
+            padding: 15px;
+        }
+
+        .section {
+            margin-bottom: 15px;
+        }
+
+        .section-title {
+            font-size: 12px;
+            font-weight: 700;
+            color: #1e3c72;
+            margin-bottom: 7px;
+            padding-bottom: 4px;
+            border-bottom: 2px solid #2a5298;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            position: relative;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .section-icon {
+            width: 14px;
+            height: 14px;
+            object-fit: contain;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 20px;
+            height: 2px;
+            background: #ffd700;
+        }
+
+        /* Skills */
+        .skill-category {
+            margin-bottom: 8px;
+            background: white;
+            padding: 8px;
+            border-radius: 8px;
+            box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+        }
+
+        .skill-category h4 {
+            font-size: 10px;
+            color: #1e3c72;
+            margin-bottom: 6px;
+            font-weight: 600;
+        }
+
+        .skill-icons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 4px;
+            align-items: center;
+        }
+
+        .tech-icon {
+            width: 24px;
+            height: 24px;
+            object-fit: contain;
+            transition: transform 0.3s;
+            position: relative;
+            cursor: pointer;
+        }
+
+        .tech-icon:hover {
+            transform: scale(1.1);
+        }
+
+        /* Tooltip Styles */
+        .tech-icon[title]:hover::after {
+            content: attr(title);
+            position: absolute;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #2c3e50;
+            color: white;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 8px;
+            white-space: nowrap;
+            z-index: 1000;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+        }
+
+        .tech-icon[title]:hover::before {
+            content: '';
+            position: absolute;
+            bottom: 26px;
+            left: 50%;
+            transform: translateX(-50%);
+            border: 4px solid transparent;
+            border-top-color: #2c3e50;
+            z-index: 1000;
+        }
+
+        .skill-text[title] {
+            cursor: pointer;
+            position: relative;
+        }
+        .skill-text-yellow {
+            background: linear-gradient(45deg, #d8db22, #fff306);
+            color: #1e3c72;
+            padding: 2px 6px;
+            border-radius: 10px;
+            font-size: 7px;
+            font-weight: 500;
+            margin-left: 2px;        }
+
+        .skill-text[title]:hover::after {
+            content: attr(title);
+            position: absolute;
+            bottom: 25px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #2c3e50;
+            color: white;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 8px;
+            white-space: nowrap;
+            z-index: 1000;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+        }
+
+        .skill-text[title]:hover::before {
+            content: '';
+            position: absolute;
+            bottom: 21px;
+            left: 50%;
+            transform: translateX(-50%);
+            border: 4px solid transparent;
+            border-top-color: #2c3e50;
+            z-index: 1000;
+        }
+
+        .skill-text {
+            background: linear-gradient(45deg, #2a5298, #1e3c72);
+            color: white;
+            padding: 2px 6px;
+            border-radius: 10px;
+            font-size: 7px;
+            font-weight: 500;
+            margin-left: 2px;
+        }
+
+        /* Languages */
+        .language-item {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 6px;
+            align-items: center;
+            background: white;
+            padding: 4px 6px;
+            border-radius: 8px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+
+        /* Soft Skills Grid */
+        .soft-skills-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 8px;
+        }
+
+        .soft-skill-item {
+            background: white;
+            padding: 4px 6px;
+            border-radius: 8px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+            font-size: 10px;
+        }
+
+        .language-level {
+            background: linear-gradient(45deg, #e74c3c, #c0392b);
+            color: white;
+            padding: 3px 8px;
+            border-radius: 12px;
+            font-size: 10px;
+            font-weight: 600;
+        }
+
+        /* Experience */
+        .experience-item {
+            margin-bottom: 10px;
+            background: linear-gradient(135deg, #fff 0%, #f8f9fa 100%);
+            border-radius: 8px;
+            padding: 10px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+            border-left: 3px solid #2a5298;
+            position: relative;
+        }
+
+        .experience-header {
+            margin-bottom: 6px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .company-logo {
+            width: 30px;
+            height: 30px;
+            object-fit: contain;
+            border-radius: 6px;
+            background: white;
+            padding: 2px;
+            box-shadow: 0 1px 2px rgba(0,0,0,0.1);
+        }
+
+        .job-info {
+            flex: 1;
+        }
+
+        .job-title {
+            font-weight: 700;
+            color: #1e3c72;
+            font-size: 10px;
+            margin-bottom: 1px;
+        }
+
+        .company {
+            color: #2a5298;
+            font-weight: 600;
+            font-size: 9px;
+        }
+
+        .duration {
+            color: #7f8c8d;
+            font-size: 8px;
+            font-style: italic;
+            margin-top: 1px;
+        }
+
+        .job-description {
+            margin-top: 8px;
+        }
+
+        .job-description ul {
+            margin-left: 18px;
+        }
+
+        .job-description li {
+            margin-bottom: 4px;
+            position: relative;
+        }
+
+        .job-description li::marker {
+            color: #2a5298;
+        }
+
+        .tech-stack {
+            margin-top: 12px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+        }
+
+        .tech-tag {
+            background: linear-gradient(45deg, #ecf0f1, #d5dbdb);
+            color: #2c3e50;
+            padding: 4px 8px;
+            border-radius: 12px;
+            font-size: 9px;
+            border: 1px solid #bdc3c7;
+            font-weight: 500;
+            transition: all 0.3s;
+        }
+
+        .tech-tag:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        /* Education */
+        .education-item {
+            margin-bottom: 8px;
+            background: white;
+            padding: 8px;
+            border-radius: 6px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+        }
+
+        .degree {
+            font-weight: 700;
+            color: #1e3c72;
+            font-size: 10px;
+            margin-bottom: 2px;
+        }
+
+        .school {
+            color: #2a5298;
+            font-size: 9px;
+            font-weight: 500;
+        }
+
+        .year {
+            color: #7f8c8d;
+            font-size: 8px;
+            font-style: italic;
+            margin-top: 2px;
+        }
+
+        /* Certifications */
+        .cert-item {
+            margin-bottom: 8px;
+            font-size: 11px;
+            background: white;
+            padding: 4px 10px;
+            border-radius: 8px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+
+        .cert-provider {
+            font-weight: 700;
+            color: #2a5298;
+        }
+
+        /* Profile */
+        .profile-content {
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            padding: 18px;
+            border-radius: 12px;
+            border-left: 4px solid #ffd700;
+            font-size: 12px;
+            line-height: 1.5;
+        }
+
+        /* Tech Stack Showcase */
+        .tech-showcase {
+            text-align: center;
+            padding: 20px;
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            border-radius: 12px;
+            margin-top: 15px;
+        }
+
+        .tech-showcase h4 {
+            color: #1e3c72;
+            margin-bottom: 15px;
+            font-size: 13px;
+        }
+
+        .tech-grid {
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            gap: 10px;
+            justify-items: center;
+        }
+
+        .tech-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 8px;
+            border-radius: 8px;
+            transition: all 0.3s;
+        }
+
+        .tech-item:hover {
+            background: white;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        .tech-item img {
+            width: 28px;
+            height: 28px;
+            object-fit: contain;
+            margin-bottom: 4px;
+        }
+
+        .tech-item span {
+            font-size: 8px;
+            color: #2c3e50;
+            font-weight: 500;
+        }
+
+        /* Print Styles */
+        @media print {
+            .container {
+                box-shadow: none;
+                width: 100%;
+                min-height: auto;
+                page-break-inside: avoid;
+                transform: scale(0.95);
+                transform-origin: top left;
+            }
+
+            body {
+                font-size: 8px;
+                line-height: 1.1;
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
+
+            .header h1 {
+                font-size: 22px;
+            }
+
+            .header .subtitle {
+                font-size: 11px;
+            }
+
+            .header {
+                padding: 8px 15px;
+                page-break-inside: avoid;
+            }
+
+            .profile-photo {
+                width: 60px;
+                height: 60px;
+            }
+
+            .left-column, .right-column {
+                padding: 8px;
+            }
+
+            .section {
+                margin-bottom: 6px;
+                page-break-inside: avoid;
+            }
+
+            .experience-item {
+                margin-bottom: 6px;
+                padding: 6px;
+                page-break-inside: avoid;
+            }
+
+            .skill-category {
+                margin-bottom: 4px;
+                padding: 4px;
+            }
+
+            .tech-stack {
+                margin-top: 6px;
+            }
+
+            .tech-tag {
+                padding: 2px 6px;
+                font-size: 7px;
+                margin-bottom: 2px;
+            }
+
+            .contact-info {
+                gap: 6px;
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .contact-item {
+                padding: 4px 6px;
+                font-size: 8px;
+            }
+
+            .header::before {
+                display: none;
+            }
+
+            .tech-icon {
+                width: 18px;
+                height: 18px;
+            }
+
+            .company-logo {
+                width: 24px;
+                height: 24px;
+            }
+
+            .job-description ul {
+                margin-left: 12px;
+            }
+
+            .job-description li {
+                margin-bottom: 2px;
+                font-size: 8px;
+            }
+
+            .profile-content {
+                padding: 12px;
+                font-size: 9px;
+                line-height: 1.3;
+            }
+
+            /* Force page breaks appropriately */
+            .main-content {
+                page-break-inside: avoid;
+            }
+
+            .projects-section {
+                page-break-before: auto;
+                page-break-after: auto;
+            }
+        }
+
+        @page {
+            size: A4;
+            margin: 0.5cm;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <div class="header-content">
+                <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEAYABgAAD/2wBDAAMCAgMCAgMDAwMEAwMEBQgFBQQEBQoHBwYIDAoMDAsKCwsNDhIQDQ4RDgsLEBYQERMUFRUVDA8XGBYUGBIUFRT/2wBDAQMEBAUEBQkFBQkUDQsNFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBT/wAARCAAoACgDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwD9U6KKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooA//Z" alt="Soufiane Aniba" class="profile-photo"/>
+                <div class="header-text">
+                    <h1>SOUFIANE ANIBA</h1>
+                    <div class="subtitle">Software Engineer @Capgemini | Transformateur d'idées en projets innovants</div>
+                </div>
+            </div>
+            <div class="contact-info">
+                    <div class="contact-item">
+                        <img src="https://cdn-icons-png.flaticon.com/512/561/561127.png" alt="Email" class="contact-icon"/>
+                        <a href="mailto:soufiane.aniba@capgemini.com">soufiane.aniba@capgemini.com</a>
+                    </div>
+                    <div class="contact-item">
+                        <svg class="contact-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="24" height="24" fill="none"/>
+                            <path d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2a1 1 0 011.01-.24c1.12.37 2.33.57 3.58.57a1 1 0 011 1v3.5a1 1 0 01-1 1C7.61 22 2 16.39 2 8.5a1 1 0 011-1h3.5a1 1 0 011 1c0 1.25.2 2.46.57 3.58a1 1 0 01-.24 1.01l-2.2 2.2z" fill="currentColor"/>
+                        </svg>
+                        <a href="tel:+212656037963">+212-656037963</a>
+                    </div>
+                    <div class="contact-item">
+                        <img src="https://cdn-icons-png.flaticon.com/512/684/684908.png" alt="Location" class="contact-icon"/>
+                        <span>Casablanca, Maroc</span>
+                    </div>
+                    <div class="contact-item">
+                        <!--Linkedin logo  -->
+                        <img src="https://www.cdnlogo.com/logos/l/78/linkedin-icon.svg" alt="LinkedIn" class="contact-icon"/>
+
+                        <a href="https://www.linkedin.com/in/soufiane-aniba/" target="_blank">LinkedIn Profile</a>
+                    </div>
+                    <div class="contact-item">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub" class="contact-icon"/>
+                        <a href="https://github.com/Soufiane4906" target="_blank">GitHub Portfolio</a>
+                    </div>
+                </div>
+            </div>
+               <div class="main-content">
+            <!-- Left Column -->
+            <div class="left-column">
+                <!-- Education -->
+                <div class="section">
+                    <h3 class="section-title">
+                        Formation
+                    </h3>
+                    <div class="section-content">
+                        <div class="education-item">
+                            <div class="degree">Master M2 - Big Data & Systems Integration</div>
+                            <div class="school">École Nationale des Sciences Numériques, Université Côte d'Azur</div>
+                            <div class="year">2024 - 2025</div>
+                        </div>
+                        <div class="education-item">
+                            <div class="degree">Ingénieur Informatique</div>
+                            <div class="school">EMSI Casablanca</div>
+                            <div class="year">2023 - 2025</div>
+                        </div>
+                        <div class="education-item">
+                            <div class="degree">Licence Informatique & Réseaux</div>
+                            <div class="school">FST Mohammedia, Université Hassan II</div>
+                            <div class="year">2020-2023</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Skills -->
+                <div class="section">
+                    <h3 class="section-title">
+                        Compétences
+                    </h3>
+                    <div class="section-content">
+                        <div class="skill-category">
+                            <h4>Backend</h4>
+                            <div class="skill-icons">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="Java" class="tech-icon" title="Java 8/11/17/21 - Programmation orientée objet"/>
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-original.svg" alt="C#" class="tech-icon" title="C# - Développement .NET"/>
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python" class="tech-icon" title="Python - Scripts et APIs"/>
+
+                                  <!-- Frameworks Backend -->
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original.svg" alt="Spring Boot" class="tech-icon"/>
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dot-net/dot-net-original.svg" alt=".NET Core" class="tech-icon"/>
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg" alt="Express.js" class="tech-icon"/>
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/django/django-plain.svg" alt="Django" class="tech-icon"/>
+
+                   <!-- API & Services -->
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/graphql/graphql-plain.svg" alt="GraphQL" class="tech-icon" title="GraphQL"/>
+                            </div>
+                        </div>
+                        <div class="skill-category">
+                            <h4>Frontend</h4>
+                            <div class="skill-icons">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React" class="tech-icon" title="React.js - Framework frontend principal"/>
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/angularjs/angularjs-original.svg" alt="Angular" class="tech-icon" title="Angular - Framework frontend"/>
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript" class="tech-icon" title="JavaScript ES6+"/>
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" alt="TypeScript" class="tech-icon" title="TypeScript - JavaScript typé"/>
+                                                  <!-- Outils & Bibliothèques -->
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jquery/jquery-original.svg" alt="jQuery" class="tech-icon"/>
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/webpack/webpack-original.svg" alt="Webpack" class="tech-icon"/>
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vite/vite-original.svg" alt="Vite" class="tech-icon"/>
+                            </div>
+                        </div>
+                        <div class="skill-category">
+                            <h4>DevOps & Cloud</h4>
+                            <div class="skill-icons">
+                                <!-- Systèmes d'exploitation -->
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg" alt="Linux" class="tech-icon" title="Linux - Administration système"/>
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" alt="Docker" class="tech-icon" title="Docker - Conteneurisation"/>
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kubernetes/kubernetes-plain.svg" alt="Kubernetes" class="tech-icon" title="Kubernetes - Orchestration"/>
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jenkins/jenkins-original.svg" alt="Jenkins" class="tech-icon" title="Jenkins - CI/CD"/>
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/gitlab/gitlab-original.svg" alt="GitLab CI" class="tech-icon" title="GitLab CI - Pipeline"/>
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/terraform/terraform-original.svg" alt="Terraform" class="tech-icon" title="Terraform - IaC"/>
+                                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/azure/azure-original.svg" alt="Azure" class="tech-icon"/>
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/googlecloud/googlecloud-original.svg" alt="GCP" class="tech-icon"/>
+                                <span class="skill-text-yellow" title="AWS" style="background-color: #ffd700 !important;">AWS</span>
+
+                            </div>
+                        </div>
+                        <div class="skill-category">
+                            <h4>Data & BI</h4>
+                            <div class="skill-icons">
+                             <!-- Bases de données -->
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" alt="PostgreSQL" class="tech-icon" title="PostgreSQL - Base de données relationnelle"/>
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" alt="MongoDB" class="tech-icon" title="MongoDB - Base de données NoSQL"/>
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="MySQL" class="tech-icon" title="MySQL - Base de données"/>
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/oracle/oracle-original.svg" alt="Oracle" class="tech-icon" title="Oracle Database"/>
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/microsoftsqlserver/microsoftsqlserver-plain.svg" alt="SQL Server" class="tech-icon" title="Microsoft SQL Server"/>
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redis/redis-original.svg" alt="Redis" class="tech-icon" title="Redis - Cache en mémoire"/>
+                                <!-- BI & Analytics -->
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/c/cf/New_Power_BI_Logo.svg" alt="Power BI" class="tech-icon" title="Power BI - Business Intelligence"/>
+                                <img src="https://cdn.worldvectorlogo.com/logos/tableau-software.svg" alt="Tableau" class="tech-icon" title="Tableau - Visualisation de données"/>
+
+                            </div>
+                        </div>
+                        <div class="skill-category">
+                            <h4>Mobile & Tests</h4>
+                            <div class="skill-icons">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg" alt="Flutter" class="tech-icon"/>
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React Native" class="tech-icon"/>
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dart/dart-original.svg" alt="Dart" class="tech-icon"/>                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/android/android-original.svg" alt="Android" class="tech-icon" title="Android - Développement natif"/>
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/junit/junit-original.svg" alt="JUnit" class="tech-icon" title="JUnit 5 - Tests unitaires"/>
+                                <span class="skill-text" title="Framework de mocking">Mockito</span>
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sonarqube/sonarqube-original.svg" alt="SonarQube" class="tech-icon" title="SonarQube - Qualité du code"/>
+                            </div>
+                        </div>
+                        <div class="skill-category">
+                            <h4>IA </h4>
+                            <div class="skill-icons">
+                                <!-- Frameworks ML/DL -->
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tensorflow/tensorflow-original.svg" alt="TensorFlow" class="tech-icon" title="TensorFlow"/>
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pytorch/pytorch-original.svg" alt="PyTorch" class="tech-icon" title="pytorch"/>
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/a/ae/Keras_logo.svg" alt="Keras" class="tech-icon" title="Keras"/>
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/0/05/Scikit_learn_logo_small.svg" alt="Scikit-learn" class="tech-icon" title="Scikit-learn"/>
+
+                                <!-- Bibliothèques Python -->
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/numpy/numpy-original.svg" alt="NumPy" class="tech-icon" title="numpy"/>
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pandas/pandas-original.svg" alt="Pandas" class="tech-icon"  title="pandas"/>
+
+                                <!-- Techniques & Applications -->
+
+                                <span class="skill-text">Computer Vision</span>
+
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Soft Skills -->
+                <div class="section">
+                    <h3 class="section-title">
+                        Soft Skills
+                    </h3>
+                    <div class="section-content">
+                        <div class="soft-skills-grid">
+                            <div class="soft-skill-item">
+                                <span>Esprit d'équipe</span>
+                            </div>
+                            <div class="soft-skill-item">
+                                <span> Adaptabilité</span>
+                            </div>
+
+                            <div class="soft-skill-item">
+                                <span> Autonomie</span>
+                            </div>
+                            <div class="soft-skill-item">
+                                <span> Innovation</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Languages -->
+                <div class="section">
+                    <h3 class="section-title">
+                        Langues
+                    </h3>
+                    <div class="section-content">
+                        <div class="language-item">
+                            <span>Arabe</span>
+                            <span class="language-level">Natif</span>
+                        </div>
+                        <div class="language-item">
+                            <span>Français</span>
+                            <span class="language-level">Courant</span>
+                        </div>
+                        <div class="language-item">
+                            <span>Anglais</span>
+                            <span class="language-level">Professionnel</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Certifications -->
+                <div class="section">
+                    <h3 class="section-title">
+                        Certifications
+                    </h3>
+                    <div class="section-content">
+                        <div class="cert-item">
+                            <span class="cert-provider">IBM</span> - Big Data Spark & Hadoop (2025)
+                        </div>
+                        <div class="cert-item">
+                            <span class="cert-provider">Google Cloud</span> - Java Microservices (2024)
+                        </div>
+                        <div class="cert-item">
+                            <span class="cert-provider">Certiprof</span> - SCRUM Foundation SFPC (2024)
+                        </div>
+                        <div class="cert-item">
+                            <span class="cert-provider">IBM</span> - Docker, Kubernetes & OpenShift (2024)
+                        </div>
+                        <div class="cert-item">
+                            <span class="cert-provider">Meta</span> - React Native (2024)
+                        </div>
+                        <div class="cert-item">
+                            <span class="cert-provider">Meta</span> - React Basics (2024)
+                        </div>
+                        <div class="cert-item">
+                            <span class="cert-provider">Whizlabs</span> - Azure Virtual Networks (2024)
+                        </div>
+                        <div class="cert-item">
+                            <span class="cert-provider">Google</span> - Git & GitHub (2024)
+                        </div>
+                        <div class="cert-item">
+                            <span class="cert-provider">UPenn</span> - Java & OOP (2023)
+                        </div>
+                        <div class="cert-item">
+                            <span class="cert-provider">UMich</span> - Python for Everybody (2023)
+                        </div>
+                        <div class="cert-item">
+                            <span class="cert-provider">HKUST</span> - UML Software Modeling (2023)
+                        </div>
+                        <div class="cert-item">
+                            <span class="cert-provider">Cisco</span> - CCNA Security
+                        </div>
+                        <div class="cert-item">
+                            <span class="cert-provider">Udemy</span> - Apache Kafka Spring Boot
+                        </div>
+                        <div class="cert-item">
+                            <span class="cert-provider">Udemy</span> - JUnit & Mockito Testing
+                        </div>
+                        <div class="cert-item">
+                            <span class="cert-provider">Coursera</span> - Distributed Systems Java
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Column -->
+            <div class="right-column">
+                <!-- Profile -->
+                <div class="section">
+                    <h3 class="section-title">
+                        Profil
+                    </h3>
+                    <div class="profile-content">
+                        <strong>💡 Je transforme vos idées en projets innovants.</strong><br><br>
+                        Software Engineer passionné par le développement Full Stack avec expertise en architecture logicielle moderne. Spécialisé dans la création de solutions robustes et scalables avec Java/Spring Boot, React, Node.js et technologies Cloud.<br><br>
+                        <strong>🎯 Vision :</strong> Concevoir des applications performantes qui résolvent des problèmes réels et apportent de la valeur métier.
+                    </div>
+                </div>
+
+                <!-- Experience -->
+                <div class="section">
+                    <h3 class="section-title">
+                        Expérience Professionnelle
+                    </h3>
+                    <div class="section-content">
+                        <div class="experience-item">
+                            <div class="experience-header">
+                                <img src="public/assets/img/experience/Capgemini.png" alt="Capgemini" class="company-logo"/>
+                                <div class="job-info">
+                                    <div class="job-title">Software Engineer</div>
+                                    <div class="company">CAPGEMINI TS</div>
+                                    <div class="duration">Mars 2025 - Actuellement</div>
+                                </div>
+                            </div>
+                            <div class="job-description">
+                                <ul>
+                                <li>Conception et développement d'une plateforme interne d'évaluation agile, intégrée à NEXT</li>
+                                <li>Refonte vers une architecture microservices, mise en place de pipelines CI/CD, DDD et Clean Architecture</li>
+                                <li>Développement de solutions Full Stack distribuées avec intégration de tests unitaires et d'intégration</li>
+                                <li>Implémentation de microservices, automatisation DevOps, CI/CD et stratégies de testing avancées</li>
+                                </ul>
+                                <div class="tech-stack">
+                                    <span class="tech-tag">Java Spring Boot</span>
+                                    <span class="tech-tag">React</span>
+                                    <span class="tech-tag">Docker</span>
+                                    <span class="tech-tag">CI/CD</span>
+                                    <span class="tech-tag">Jenkins</span>
+                                    <span class="tech-tag">Microservices</span>
+                                    <span class="tech-tag">REST API</span>
+                                    <span class="tech-tag">JUnit</span>
+                                    <span class="tech-tag">Mockito</span>
+                                     <span class="tech-tag">SonarQube</span>
+
+                                        <span class="tech-tag">Grafana</span>
+                                        <span class="tech-tag">Prometheus</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="experience-item">
+                            <div class="experience-header">
+                                <img src="https://media.licdn.com/dms/image/v2/D4E0BAQHVNuqWsI162g/company-logo_200_200/company-logo_200_200/0/1694360474816?e=2147483647&v=beta&t=BSa2vGJk_Hr6XdcBDH7fU4qb29QdWx5clRhLcr5qBU8" alt="3D Smart Factory" class="company-logo"/>
+                                <div class="job-info">
+                                    <div class="job-title">Développeur Full Stack</div>
+                                    <div class="company">3D SMART FACTORY</div>
+                                    <div class="duration">Sept - Oct 2024</div>
+                                </div>
+                            </div>
+                            <div class="job-description">
+                                <ul>
+                                    <li>Application gestion stagiaires temps réel</li>
+                                    <li>API intégration Google Sheets</li>
+                                    <li>Solution d'administration et gestion de données</li>
+                                </ul>
+                                <div class="tech-stack">
+                                    <span class="tech-tag">Spring Boot</span>
+                                    <span class="tech-tag">Angular</span>
+                                    <span class="tech-tag">Rest Api</span>
+                                    <span class="tech-tag">JWT</span>
+                                    <span class="tech-tag">Google API</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="experience-item">
+                            <div class="experience-header">
+                                <img src="public/assets/img/experience/OLA_Energy.png" alt="OLA Energy" class="company-logo"/>
+                                <div class="job-info">
+                                    <div class="job-title">Développeur Power BI, Power Apps & IA</div>
+                                    <div class="company">OLA ENERGY</div>
+                                    <div class="duration">Juil - Sept 2024</div>
+                                </div>
+                            </div>
+                            <div class="job-description">
+                                <ul>
+                                    <li>🏆 <strong>Vainqueur EMSI Summer IT Competition 2024</strong></li>
+                                    <li>Développement modèles prédictifs IA (MTTF/MTTR) pour maintenance préventive</li>
+                                    <li>Système GMAO avec tableaux de bord Power BI interactifs</li>
+                                    <li>Applications Power Apps pour gestion inventaire et pièces de rechange</li>
+                                    <li>Interfaces ergonomiques pour magasiniers et techniciens</li>
+                                    <li>Optimisation planning maintenance basée sur l'analyse prédictive</li>
+                                </ul>
+                                <div class="tech-stack">
+                                    <span class="tech-tag">Power BI</span>
+                                    <span class="tech-tag">Power Apps</span>
+                                    <span class="tech-tag">Machine Learning</span>
+                                    <span class="tech-tag">GMAO</span>
+                                    <span class="tech-tag">Prédictif MTTF/MTTR</span>
+                                    <span class="tech-tag">Excel</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="experience-item">
+                            <div class="experience-header">
+                                <img src="public/assets/img/experience/SILIAD.png" alt="SILIAD" class="company-logo"/>
+                                <div class="job-info">
+                                    <div class="job-title">Développeur .NET/Angular</div>
+                                    <div class="company">SILIAD</div>
+                                    <div class="duration">Nov 2023 - Mai 2024</div>
+                                </div>
+                            </div>
+                            <div class="job-description">
+                                <ul>
+                                    <li>Applications location automobile</li>
+                                    <li>Solutions clients et agences</li>
+                                    <li>Tests unitaires, Agile/Scrum</li>
+                                </ul>
+                                <div class="tech-stack">
+                                    <span class="tech-tag">.NET </span>
+                                    <span class="tech-tag">Angular</span>
+                                    <span class="tech-tag">NUnit</span>
+                                    <span class="tech-tag">DDD</span>
+
+                                    <span class="tech-tag">Docker</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="experience-item">
+                            <div class="experience-header">
+                                <img src="public/assets/img/experience/ONP_Office_National_des_Pêches.png" alt="ONP" class="company-logo"/>
+                                <div class="job-info">
+                                    <div class="job-title">Développeur .NET</div>
+                                    <div class="company">Office National des Pêches</div>
+                                    <div class="duration">Mars - Juin 2023</div>
+                                </div>
+                            </div>
+                            <div class="job-description">
+                                <ul>
+                                    <li>Modernisation SI avec application web</li>
+                                    <li>Architecture MVC, intégration services web</li>
+                                    <li>Développement API RESTful</li>
+
+                                    <li>Gestion flotte navale et maintenance</li>
+                                </ul>
+                                <div class="tech-stack">
+                                    <span class="tech-tag">.NET Core</span>
+                                    <span class="tech-tag">Entity Framework</span>
+                                    <span class="tech-tag">SQL Server</span>
+                                    <span class="tech-tag">SOAP</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Projets Freelance -->
+                <div class="section">
+                    <h3 class="section-title">
+                        🚀 Projets Freelance & Innovation
+                    </h3>
+                    <div class="section-content">
+                        <div class="experience-item">
+                            <div class="experience-header">
+                                <div style="width: 30px; height: 30px; background: linear-gradient(45deg, #E74C3C, #C0392B); color: white; display: flex; align-items: center; justify-content: center; border-radius: 6px; font-weight: bold; font-size: 8px;">AUTO</div>
+                                <div class="job-info">
+                                    <div class="job-title">Lead Developer Full Stack</div>
+                                    <div class="company">AUTOMOTIVE.MA</div>
+                                    <div class="duration">2024 - En production</div>
+                                </div>
+                            </div>
+                            <div class="job-description">
+                                <ul>
+                                    <li>💼 Plateforme complète de location de voitures au Maroc (100+ villes)</li>
+                                    <li>🏆 Plus de 2000+ utilisateurs actifs, 50+ agences partenaires</li>
+                                    <li>💳 Système de réservation en ligne avec paiement intégré</li>
+                                    <li>⚡ Interface d'administration temps réel pour gestion de flotte</li>
+                                    <li>📊 Tableaux de bord analytiques et reporting avancé</li>
+                                </ul>
+                                <div class="tech-stack">
+                                    <span class="tech-tag">React</span>
+                                    <span class="tech-tag">Node.js</span>
+                                    <span class="tech-tag">MongoDB</span>
+                                    <span class="tech-tag">Express.js</span>
+                                    <span class="tech-tag">Stripe API</span>
+                                    <span class="tech-tag">Socket.io</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="experience-item">
+                            <div class="experience-header">
+                                <div style="width: 30px; height: 30px; background: linear-gradient(45deg, #3498DB, #2980B9); color: white; display: flex; align-items: center; justify-content: center; border-radius: 6px; font-weight: bold; font-size: 8px;">TRIP</div>
+                                <div class="job-info">
+                                    <div class="job-title">Architecte & Développeur</div>
+                                    <div class="company">BLABLATRIP.COM</div>
+                                    <div class="duration">2024 - En production</div>
+                                </div>
+                            </div>
+                            <div class="job-description">
+                                <ul>
+                                    <li>🌍 Plateforme de covoiturage et voyage collaboratif innovante</li>
+                                    <li>📱 Application mobile-first avec PWA</li>
+                                    <li>🗺️ Géolocalisation avancée et calcul d'itinéraires optimisés</li>
+                                    <li>💬 Chat temps réel et système de notation utilisateurs</li>
+                                    <li>🔒 Système de sécurité et vérification d'identité</li>
+                                </ul>
+                                <div class="tech-stack">
+                                    <span class="tech-tag">Vue.js</span>
+                                    <span class="tech-tag">Laravel</span>
+                                    <span class="tech-tag">MySQL</span>
+                                    <span class="tech-tag">Google Maps API</span>
+                                    <span class="tech-tag">WebSocket</span>
+                                    <span class="tech-tag">PWA</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="experience-item">
+                            <div class="experience-header">
+                                <div style="width: 30px; height: 30px; background: linear-gradient(45deg, #F39C12, #E67E22); color: white; display: flex; align-items: center; justify-content: center; border-radius: 6px; font-weight: bold; font-size: 7px;">PARTS</div>
+                                <div class="job-info">
+                                    <div class="job-title">Tech Lead E-commerce</div>
+                                    <div class="company">MOROCCAUTOPARTS.COM</div>
+                                    <div class="duration">2024 - En production</div>
+                                </div>
+                            </div>
+                            <div class="job-description">
+                                <ul>
+                                    <li>🛒 Marketplace B2B/B2C spécialisée pièces automobiles</li>
+                                    <li>🔍 Catalogue intelligent avec 10,000+ références</li>
+                                    <li>🏪 Système multi-vendeurs avec commissions automatisées</li>
+                                    <li>📦 Gestion stock temps réel et logistique intégrée</li>
+                                    <li>📈 Analytics vendeurs et insights business</li>
+                                </ul>
+                                <div class="tech-stack">
+                                    <span class="tech-tag">Angular</span>
+                                    <span class="tech-tag">Spring Boot</span>
+                                    <span class="tech-tag">PostgreSQL</span>
+                                    <span class="tech-tag">Redis</span>
+                                    <span class="tech-tag">Elasticsearch</span>
+                                    <span class="tech-tag">PayPal API</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        </div>
+
+        <!-- Main Content -->
+
+    </div>
+</body>
+</html>

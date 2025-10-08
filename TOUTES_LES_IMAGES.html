@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toutes les Images Extraites - Portfolio Soufiane</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            padding: 2rem;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            background: white;
+            padding: 2rem;
+            border-radius: 16px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 3rem;
+            padding-bottom: 2rem;
+            border-bottom: 3px solid #C1272D;
+        }
+
+        h1 {
+            color: #C1272D;
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .subtitle {
+            color: #666;
+            font-size: 1.1rem;
+        }
+
+        .stats {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin: 2rem 0;
+            flex-wrap: wrap;
+        }
+
+        .stat-box {
+            background: linear-gradient(135deg, #C1272D 0%, #006233 100%);
+            color: white;
+            padding: 1.5rem 2rem;
+            border-radius: 12px;
+            text-align: center;
+            min-width: 150px;
+            box-shadow: 0 4px 15px rgba(193, 39, 45, 0.3);
+        }
+
+        .stat-number {
+            font-size: 3rem;
+            font-weight: bold;
+            display: block;
+        }
+
+        .stat-label {
+            font-size: 0.9rem;
+            margin-top: 0.5rem;
+            opacity: 0.95;
+        }
+
+        .category-section {
+            margin-bottom: 3rem;
+        }
+
+        .category-header {
+            background: linear-gradient(90deg, #006233 0%, #C1272D 100%);
+            color: white;
+            padding: 1rem 1.5rem;
+            border-radius: 8px;
+            margin-bottom: 1.5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .category-title {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .category-count {
+            background: rgba(255,255,255,0.2);
+            padding: 0.3rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+        }
+
+        .images-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .image-card {
+            background: #f8f9fa;
+            border: 2px solid #e0e0e0;
+            border-radius: 12px;
+            padding: 1.5rem;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .image-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(193, 39, 45, 0.2);
+            border-color: #C1272D;
+        }
+
+        .image-wrapper {
+            background: white;
+            padding: 1rem;
+            border-radius: 8px;
+            margin-bottom: 1rem;
+            height: 120px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .image-card img {
+            max-width: 100%;
+            max-height: 100px;
+            object-fit: contain;
+        }
+
+        .image-info {
+            color: #333;
+        }
+
+        .image-title {
+            font-weight: bold;
+            font-size: 1rem;
+            margin-bottom: 0.5rem;
+            color: #C1272D;
+        }
+
+        .image-details {
+            font-size: 0.85rem;
+            color: #666;
+            margin-top: 0.5rem;
+        }
+
+        .detail-item {
+            margin: 0.25rem 0;
+        }
+
+        .detail-label {
+            font-weight: 600;
+            color: #006233;
+        }
+
+        .url-box {
+            background: #f0f0f0;
+            padding: 0.5rem;
+            border-radius: 4px;
+            font-size: 0.75rem;
+            word-break: break-all;
+            margin-top: 0.5rem;
+            font-family: 'Courier New', monospace;
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 0.25rem 0.75rem;
+            border-radius: 12px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            margin-top: 0.5rem;
+        }
+
+        .badge-education {
+            background: #e3f2fd;
+            color: #1976d2;
+        }
+
+        .badge-experience {
+            background: #f3e5f5;
+            color: #7b1fa2;
+        }
+
+        .badge-certification {
+            background: #e8f5e9;
+            color: #388e3c;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 3rem;
+            padding-top: 2rem;
+            border-top: 2px solid #e0e0e0;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>📸 Galerie d'Images Portfolio</h1>
+            <p class="subtitle">Extraction complète des logos et images - Éducation, Expérience & Certifications</p>
+        </header>
+
+        <div class="stats">
+            <div class="stat-box">
+                <span class="stat-number">33</span>
+                <span class="stat-label">Images Totales</span>
+            </div>
+            <div class="stat-box">
+                <span class="stat-number">4</span>
+                <span class="stat-label">Éducation</span>
+            </div>
+            <div class="stat-box">
+                <span class="stat-number">5</span>
+                <span class="stat-label">Expérience</span>
+            </div>
+            <div class="stat-box">
+                <span class="stat-number">24</span>
+                <span class="stat-label">Certifications</span>
+            </div>
+        </div>
+
+        <!-- ÉDUCATION -->
+        <div class="category-section">
+            <div class="category-header">
+                <span class="category-title">📚 ÉDUCATION</span>
+                <span class="category-count">4 logos</span>
+            </div>
+            <div class="images-grid">
+                <div class="image-card">
+                    <div class="image-wrapper">
+                        <img src="https://media.licdn.com/dms/image/v2/D4E0BAQGFGluKlFLKbg/company-logo_100_100/B4EZVIMm_gG0AA-/0/1740673020369/univ_cotedazur_logo?e=1762992000&v=beta&t=MQBL8hlpavGRrMzzyc1K2RBC5HO4MEa2iu-tzomr1Rs"
+                             alt="Université Côte d'Azur">
+                    </div>
+                    <div class="image-info">
+                        <div class="image-title">🎓 Université Côte d'Azur</div>
+                        <span class="badge badge-education">ÉDUCATION</span>
+                        <div class="image-details">
+                            <div class="detail-item"><span class="detail-label">Diplôme:</span> Master M2 MBDS</div>
+                            <div class="detail-item"><span class="detail-label">Période:</span> 2024-2025</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="image-card">
+                    <div class="image-wrapper">
+                        <img src="https://media.licdn.com/dms/image/v2/D4E0BAQE_Fu9hueUY4g/company-logo_100_100/B4EZZsp0_oHEAU-/0/1745579626980/ecole_marocaine_des_sciences_de_lingnieur_logo?e=1762992000&v=beta&t=PRISNK9jbor-h39WN_wBpQNuTqCVgIvenD9z4EQcuxo"
+                             alt="EMSI">
+                    </div>
+                    <div class="image-info">
+                        <div class="image-title">🎓 EMSI</div>
+                        <span class="badge badge-education">ÉDUCATION</span>
+                        <div class="image-details">
+                            <div class="detail-item"><span class="detail-label">Diplôme:</span> Ingénieur Informatique</div>
+                            <div class="detail-item"><span class="detail-label">Période:</span> 2020-2023</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="image-card">
+                    <div class="image-wrapper">
+                        <img src="https://media.licdn.com/dms/image/v2/C4E0BAQHsmvJCblF1VA/company-logo_100_100/company-logo_100_100/0/1652945941816/fstm_logo?e=1762992000&v=beta&t=E9KacYRD57m4JW2Ta3lp3SeO345PdMHfGBejdhSTSAE"
+                             alt="FST Mohammedia">
+                    </div>
+                    <div class="image-info">
+                        <div class="image-title">🎓 FST Mohammedia</div>
+                        <span class="badge badge-education">ÉDUCATION</span>
+                        <div class="image-details">
+                            <div class="detail-item"><span class="detail-label">Diplôme:</span> Licence Mathématiques Informatique</div>
+                            <div class="detail-item"><span class="detail-label">Période:</span> 2017-2020</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- EXPÉRIENCE -->
+        <div class="category-section">
+            <div class="category-header">
+                <span class="category-title">💼 EXPÉRIENCE PROFESSIONNELLE</span>
+                <span class="category-count">5 logos</span>
+            </div>
+            <div class="images-grid">
+                <div class="image-card">
+                    <div class="image-wrapper">
+                        <img src="https://media.licdn.com/dms/image/v2/D4D0BAQH-ZV832H4sdA/company-logo_100_100/company-logo_100_100/0/1705572256355/capgemini_logo?e=1762992000&v=beta&t=4iIZ5Or0SGx3qEo2x4h3ESei1_TUwIhbQeW2gypLjqk"
+                             alt="Capgemini">
+                    </div>
+                    <div class="image-info">
+                        <div class="image-title">💼 Capgemini</div>
+                        <span class="badge badge-experience">EXPÉRIENCE</span>
+                        <div class="image-details">
+                            <div class="detail-item"><span class="detail-label">Poste:</span> Ingénieur Étude et Développement</div>
+                            <div class="detail-item"><span class="detail-label">Période:</span> Mars 2024 - Août 2024</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="image-card">
+                    <div class="image-wrapper">
+                        <img src="https://media.licdn.com/dms/image/v2/D4E0BAQHCmuWqR_iuJA/company-logo_100_100/company-logo_100_100/0/1703856942365/ola_energy_group_logo?e=1762992000&v=beta&t=Z6IQyduy6CFTJeEQ0hKe4Juz57UzlryX6n2vhw31sw0"
+                             alt="OLA Energy">
+                    </div>
+                    <div class="image-info">
+                        <div class="image-title">💼 OLA Energy</div>
+                        <span class="badge badge-experience">EXPÉRIENCE</span>
+                        <div class="image-details">
+                            <div class="detail-item"><span class="detail-label">Poste:</span> Stagiaire DevOps Engineer</div>
+                            <div class="detail-item"><span class="detail-label">Période:</span> Avril 2023 - Juin 2023</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="image-card">
+                    <div class="image-wrapper">
+                        <img src="https://media.licdn.com/dms/image/v2/D4E0BAQF2qiBAi7Z96g/company-logo_100_100/company-logo_100_100/0/1681224346053/siliadsarl_logo?e=1762992000&v=beta&t=3NDaBIjoStcsZcHTlgaUHC7noxwWTiiDpwidRLpb3mI"
+                             alt="SILIAD">
+                    </div>
+                    <div class="image-info">
+                        <div class="image-title">💼 SILIAD</div>
+                        <span class="badge badge-experience">EXPÉRIENCE</span>
+                        <div class="image-details">
+                            <div class="detail-item"><span class="detail-label">Poste:</span> Développeur Full Stack</div>
+                            <div class="detail-item"><span class="detail-label">Période:</span> Juillet 2022 - Septembre 2022</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="image-card">
+                    <div class="image-wrapper">
+                        <img src="https://media.licdn.com/dms/image/v2/C560BAQFcoH7OrmEgyA/company-logo_100_100/company-logo_100_100/0/1631326836331?e=1762992000&v=beta&t=vpHITnj_KcHM-wxu26Q7TF0A-OPJaA1803gQnKR1IBM"
+                             alt="ONP">
+                    </div>
+                    <div class="image-info">
+                        <div class="image-title">💼 ONP Office National des Pêches</div>
+                        <span class="badge badge-experience">EXPÉRIENCE</span>
+                        <div class="image-details">
+                            <div class="detail-item"><span class="detail-label">Poste:</span> Développeur Full Stack</div>
+                            <div class="detail-item"><span class="detail-label">Période:</span> Juillet 2021 - Septembre 2021</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="image-card">
+                    <div class="image-wrapper">
+                        <img src="https://media.licdn.com/dms/image/v2/D4E0BAQGRyLYTNz-RJg/company-logo_100_100/company-logo_100_100/0/1695032888376/alami_ecom_logo?e=1762992000&v=beta&t=am4wWiT1LqepltdBhQJiFgqS3fIGrTcycHhW-De_Rec"
+                             alt="Alami ecom">
+                    </div>
+                    <div class="image-info">
+                        <div class="image-title">💼 Alami ecom (Freelance)</div>
+                        <span class="badge badge-experience">EXPÉRIENCE</span>
+                        <div class="image-details">
+                            <div class="detail-item"><span class="detail-label">Poste:</span> Développeur Full Stack</div>
+                            <div class="detail-item"><span class="detail-label">Période:</span> Mars 2021 - Juin 2021</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- CERTIFICATIONS -->
+        <div class="category-section">
+            <div class="category-header">
+                <span class="category-title">🎓 CERTIFICATIONS</span>
+                <span class="category-count">24 logos</span>
+            </div>
+            <div class="images-grid">
+                <div class="image-card">
+                    <div class="image-wrapper">
+                        <img src="https://media.licdn.com/dms/image/v2/D560BAQGiz5ecgpCtkA/company-logo_100_100/company-logo_100_100/0/1688684715866/ibm_logo?e=1762992000&v=beta&t=1v-lZKZC414qC40RivV6Vnn4x5lVoquJUXEO1MqitAg"
+                             alt="IBM">
+                    </div>
+                    <div class="image-info">
+                        <div class="image-title">🎓 IBM</div>
+                        <span class="badge badge-certification">CERTIFICATION</span>
+                        <div class="image-details">
+                            <div class="detail-item"><span class="detail-label">Certification:</span> IBM Data Science</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="image-card">
+                    <div class="image-wrapper">
+                        <img src="https://media.licdn.com/dms/image/v2/C4D0BAQHTIj3QmQ5N0A/company-logo_100_100/company-logo_100_100/0/1656443889325?e=1762992000&v=beta&t=fZavsymWiNk5K9SW2mXVKLZLHE8mw8d87hsN3iqqdT0"
+                             alt="Google Cloud">
+                    </div>
+                    <div class="image-info">
+                        <div class="image-title">🎓 Google Cloud</div>
+                        <span class="badge badge-certification">CERTIFICATION</span>
+                        <div class="image-details">
+                            <div class="detail-item"><span class="detail-label">Certification:</span> Google Cloud Training</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="image-card">
+                    <div class="image-wrapper">
+                        <img src="https://media.licdn.com/dms/image/v2/D4E0BAQH1qwoIk9cWIQ/company-logo_100_100/company-logo_100_100/0/1724256453909/certiprof_logo?e=1762992000&v=beta&t=qIhOUW3yJMRsaSSUInOzLiq7mfngM5ZhmVwcV152asU"
+                             alt="Certiprof">
+                    </div>
+                    <div class="image-info">
+                        <div class="image-title">🎓 Certiprof</div>
+                        <span class="badge badge-certification">CERTIFICATION</span>
+                        <div class="image-details">
+                            <div class="detail-item"><span class="detail-label">Certification:</span> SCRUM Foundation Professional</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="image-card">
+                    <div class="image-wrapper">
+                        <img src="https://media.licdn.com/dms/image/v2/D560BAQHBmbxCDP0JQQ/company-logo_100_100/B56ZlkdQSaI8AQ-/0/1758327015620/meta_logo?e=1762992000&v=beta&t=NMud3schmYeOHEtFo5HWJhhEBXdbFj0BT3zday_TtHc"
+                             alt="Meta">
+                    </div>
+                    <div class="image-info">
+                        <div class="image-title">🎓 Meta</div>
+                        <span class="badge badge-certification">CERTIFICATION</span>
+                        <div class="image-details">
+                            <div class="detail-item"><span class="detail-label">Certification:</span> Meta Back-End Developer</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="image-card">
+                    <div class="image-wrapper">
+                        <img src="https://media.licdn.com/dms/image/v2/D4E0BAQGv3cqOuUMY7g/company-logo_100_100/B4EZmhegXHGcAU-/0/1759350753990/google_logo?e=1762992000&v=beta&t=IRg6U5Y0wLiwKKScmm8QRs1ltqsQuamyWm_-jpDyPWM"
+                             alt="Google">
+                    </div>
+                    <div class="image-info">
+                        <div class="image-title">🎓 Google</div>
+                        <span class="badge badge-certification">CERTIFICATION</span>
+                        <div class="image-details">
+                            <div class="detail-item"><span class="detail-label">Certification:</span> Google IT Support</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="image-card">
+                    <div class="image-wrapper">
+                        <img src="https://media.licdn.com/dms/image/v2/C4E0BAQHnbnsnJlBiZg/company-logo_100_100/company-logo_100_100/0/1630601168515/university_of_pennsylvania_logo?e=1762992000&v=beta&t=6LBPAQSiFW3wlWOo6PGwN_TDicYfIubKs0foSPqm0oM"
+                             alt="University of Pennsylvania">
+                    </div>
+                    <div class="image-info">
+                        <div class="image-title">🎓 University of Pennsylvania</div>
+                        <span class="badge badge-certification">CERTIFICATION</span>
+                    </div>
+                </div>
+
+                <div class="image-card">
+                    <div class="image-wrapper">
+                        <img src="https://media.licdn.com/dms/image/v2/C4E0BAQFGfERBPGurCg/company-logo_100_100/company-logo_100_100/0/1631307390795?e=1762992000&v=beta&t=QLw0aG8EAKiCUTKDYAMk_FUKRiElHyYuI-C4cuXUzpA"
+                             alt="University of Michigan">
+                    </div>
+                    <div class="image-info">
+                        <div class="image-title">🎓 University of Michigan</div>
+                        <span class="badge badge-certification">CERTIFICATION</span>
+                    </div>
+                </div>
+
+                <div class="image-card">
+                    <div class="image-wrapper">
+                        <img src="https://media.licdn.com/dms/image/v2/D560BAQEf_NHzN2yVQg/company-logo_100_100/company-logo_100_100/0/1723593046388/udemy_logo?e=1762992000&v=beta&t=62sIK_7dqjx5VHBH2M3zd6prVg85kzIrusO5o7h8RWA"
+                             alt="Udemy">
+                    </div>
+                    <div class="image-info">
+                        <div class="image-title">🎓 Udemy</div>
+                        <span class="badge badge-certification">CERTIFICATION</span>
+                        <div class="image-details">
+                            <div class="detail-item"><span class="detail-label">Note:</span> Multiples formations</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="image-card">
+                    <div class="image-wrapper">
+                        <img src="https://media.licdn.com/dms/image/v2/C4D0BAQGexnfBxeEG-g/company-logo_100_100/company-logo_100_100/0/1630530042036/coursera_logo?e=1762992000&v=beta&t=h3h3pTpg5j61CydBLuWpYxGNIZntp97BWhhj1u1X3CU"
+                             alt="Coursera">
+                    </div>
+                    <div class="image-info">
+                        <div class="image-title">🎓 Coursera</div>
+                        <span class="badge badge-certification">CERTIFICATION</span>
+                    </div>
+                </div>
+
+                <div class="image-card">
+                    <div class="image-wrapper">
+                        <img src="https://media.licdn.com/dms/image/v2/D560BAQGo0LANKsqgCg/company-logo_100_100/B56ZaSzDOOGoAQ-/0/1746219578583/cisco_logo?e=1762992000&v=beta&t=aeMJQ8Hxh_zbBaSZJSyonwdhynPmAfA6-xEBqHzIfKY"
+                             alt="Cisco">
+                    </div>
+                    <div class="image-info">
+                        <div class="image-title">🎓 Cisco</div>
+                        <span class="badge badge-certification">CERTIFICATION</span>
+                        <div class="image-details">
+                            <div class="detail-item"><span class="detail-label">Certification:</span> Cisco Networking</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <p><strong>Portfolio de Soufiane Aniba</strong></p>
+            <p>Total: 33 images extraites depuis les fichiers LinkedIn HTML</p>
+            <p style="margin-top: 1rem; font-size: 0.9rem;">
+                📧 anibasoufiane2001@gmail.com |
+                💼 <a href="https://linkedin.com/in/soufianeaniba" target="_blank">linkedin.com/in/soufianeaniba</a>
+            </p>
+        </footer>
+    </div>
+</body>
+</html>
